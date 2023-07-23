@@ -31,17 +31,21 @@ const Header = () => {
       >
         <BiMenu fontSize={25} />
       </button>
+
+      <div
+        className={`fixed top-0 right-0 w-full h-screen duration-300 bg-black ${
+          showItems ? "bg-opacity-70 z-10" : "-z-10 bg-opacity-0"
+        }`}
+      ></div>
       <aside
         className={`${
-          showItems ? "opacity-100" : "opacity-0"
-        } transition duration-300 ease-out fixed left-0 top-0 w-full h-screen bg-black bg-opacity-70  text-black`}
+          showItems ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
+        } duration-300 ease-out fixed left-0 top-0 w-full h-screen z-20`}
         onClick={() => handleToggleShowItems()}
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`ms-auto h-full w-3/5 relative focus:bg-red-600  bg-white duration-300 transition ${
-            showItems ? "translate-x-0" : "translate-x-full opacity-100"
-          }`}
+          className={`ms-auto h-full w-3/5 relative bg-white text-black`}
         >
           <button
             onClick={() => handleToggleShowItems()}
