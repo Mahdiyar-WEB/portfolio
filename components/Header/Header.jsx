@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" my-3 mx-2 px-4 py-3 rounded-md bg-transparent shadow-md shadow-slate-950 text-white flex justify-between  items-center">
+    <header className="my-3 md:container md:mx-auto mx-2 px-4 py-3 rounded-md bg-transparent shadow-md shadow-slate-950 text-white flex justify-between  items-center">
       <h1 className="text-lg font-bold bg-gradient-to-r from-orange-500 via-blue-500 to-green-400 text-transparent bg-300% bg-clip-text animate-gradient ">
         Mahdiyar
       </h1>
