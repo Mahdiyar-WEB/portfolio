@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { IoClose } from "react-icons/io5";
+import { Tooltip } from "react-tooltip";
 
 const links = [
   { title: "skills", href: "#skills" },
@@ -27,7 +28,7 @@ const Header = () => {
         Mahdiyar
       </h1>
       {/* other sizes  */}
-      <ul className="hidden gap-10 pe-4 capitalize font-semibold font-sans md:flex">
+      <ul className="hidden space-x-10 pe-4 capitalize font-semibold font-sans md:flex">
         {links.map(({ title, href }) => {
           return (
             <li key={title}>
@@ -40,9 +41,13 @@ const Header = () => {
       <button
         onClick={() => handleToggleShowItems()}
         className="border border-gray-600 md:hidden rounded-md py-1 px-2"
+        data-tooltip-id="menu-tooltip"
+        data-tooltip-content="Menu"
+        data-tooltip-delay-show={500}
       >
         <BiMenu fontSize={25} />
       </button>
+      <Tooltip id="menu-tooltip" place="bottom" variant="dark" className="font-semibold tracking-wide" />
       <div
         className={`fixed top-0 right-0 w-full h-screen duration-300 md:hidden  bg-black ${
           showItems ? "bg-opacity-70 z-10" : "-z-10 bg-opacity-0"
@@ -61,9 +66,13 @@ const Header = () => {
           <button
             onClick={() => handleToggleShowItems()}
             className="absolute top-3 right-3 text-gray-700 border border-gray-300 rounded-md active:scale-110 px-1"
+            data-tooltip-id="close-tooltip"
+            data-tooltip-content="close"
+            data-tooltip-delay-show={500}
           >
             <IoClose size={25} />
           </button>
+          <Tooltip id="close-tooltip" place="bottom" variant="dark" className="font-semibold tracking-wide" />
 
           {/* links */}
           <ul className="pt-20 font-semibold flex flex-col uppercase">

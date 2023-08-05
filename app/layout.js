@@ -1,4 +1,5 @@
 import './globals.css'
+import 'aos/dist/aos.css';
 import { Inter } from 'next/font/google'
 import visbyFont from '@/constants/visbyFont';
 

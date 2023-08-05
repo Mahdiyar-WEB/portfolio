@@ -18,7 +18,7 @@ module.exports = {
       animation: {
         gradient: "animatedgradient 6s ease infinite alternate",
         wave: "animatedwave 2.5s ease infinite alternate",
-        toggle: "animatetoggle .5s linear infinite"
+        toggle: "animatetoggle .5s linear infinite",
       },
       keyframes: {
         animatedgradient: {
