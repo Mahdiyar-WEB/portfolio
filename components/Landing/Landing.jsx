@@ -11,6 +11,7 @@ const Landing = () => {
           className="rounded-s-[40px] rounded-e-[40px] ring-2"
           width={200}
           height={200}
+          priority={true}
         />
       </div>
       <h1 className="text-3xl mt-6 font-sans text-center">
