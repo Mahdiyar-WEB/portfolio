@@ -1,16 +1,79 @@
+'use client'
+import Link from "next/link";
+import { BiLogoGmail, BiLogoLinkedin, BiLogoTelegram } from "react-icons/bi";
+import { BsWhatsapp, BsGithub } from "react-icons/bs";
+import { Tooltip } from "react-tooltip";
+
 const Contact = () => {
   return (
-    <section id="contact">
-      <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-14">
+    <section id="contact" className="mb-24">
+      <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-10">
         Contact Me
       </h2>
-      <form className="flex flex-col gap-4 text-gray-700 shadow-slate-950 shadow-xl px-5 py-10">
-        <input type="text" className="px-3 py-2 rounded-md outline-none duration-200 transform-gpu focus:scale-[1.02]" placeholder="Full Name" />
-        <input type="email" required className="px-3 py-2 rounded-md outline-none duration-200 transform-gpu focus:scale-[1.02]" placeholder="Email" />
-        <input type="text" className="px-3 py-2 rounded-md outline-none duration-200 transform-gpu focus:scale-[1.02]" placeholder="Subject" />
-        <textarea  placeholder="message" className="resize-none px-3 py-2 rounded-md outline-none duration-200 transform-gpu focus:scale-[1.02]"  rows={5}></textarea>
-        <button type="submit" className="px-10 py-2 bg-blue-500 rounded-sm text-white font-semibold duration-150 active:scale-[.99]">Send</button>
-      </form>
+      <div className="rounded-md flex flex-col gap-y-8 px-6 py-6 relative shadow-md shadow-blue-600 border border-sky-500 ">
+        <p className="text-justify text-lg">
+          I’m always open to new opportunities and collaborations, so feel free
+          to reach out to me using my social media links
+        </p>
+        <div className="flex justify-center gap-6 w-full">
+          <Link
+            data-tooltip-id="telegram-tooltip"
+            data-tooltip-content="Telegram"
+            data-tooltip-delay-show={500}
+            href="https://t.me/mahdiyarMN"
+            target="_blank"
+            className="duration-150 active:scale-[.98] hover:scale-[1.03] p-2 rounded-full bg-slate-800 shadow-slate-900 shadow-md gap-2 "
+          >
+            <BiLogoTelegram size={20} />
+          </Link>
+          <Tooltip id="telegram-tooltip" place="bottom" variant="dark" className="font-semibold tracking-wide" />
+          <Link
+           data-tooltip-id="whatsapp-tooltip"
+           data-tooltip-content="Whatsapp"
+           data-tooltip-delay-show={500}
+            href="https://wa.me/989152506383"
+            target="_blank"
+            className="duration-150 active:scale-[.98] hover:scale-[1.03] p-2 rounded-full bg-slate-800 shadow-slate-900 shadow-md gap-2 "
+          >
+            <BsWhatsapp size={20} />
+          </Link>
+          <Tooltip id="whatsapp-tooltip" place="bottom" variant="dark" className="font-semibold tracking-wide" />
+
+          <Link
+           data-tooltip-id="email-tooltip"
+           data-tooltip-content="Email"
+           data-tooltip-delay-show={500}
+            href="mailto:mahdiyar472@gmail.com"
+            target="_blank"
+            className="duration-150 active:scale.98] hover:scale-[1.03] p-2 rounded-full bg-slate-800 shadow-slate-900 shadow-md gap-2 "
+          >
+            <BiLogoGmail size={20} />
+          </Link>
+          <Tooltip id="email-tooltip" place="bottom" variant="dark" className="font-semibold tracking-wide" />
+          <Link
+           data-tooltip-id="linkedin-tooltip"
+           data-tooltip-content="LinkedIn"
+           data-tooltip-delay-show={500}
+            href="https://www.linkedin.com/in/mahdiyar-marvi-web/"
+            target="_blank"
+            className="duration-150 active:scale-.98] hover:scale-[1.03] p-2 rounded-full bg-slate-800 shadow-slate-900 shadow-md gap-2 "
+          >
+            <BiLogoLinkedin size={20} />
+          </Link>
+          <Tooltip id="linkedin-tooltip" place="bottom" variant="dark" className="font-semibold tracking-wide" />
+          <Link
+           data-tooltip-id="github-tooltip"
+           data-tooltip-content="Github"
+           data-tooltip-delay-show={500}
+            href="https://github.com/Mahdiyar-WEB"
+            target="_blank"
+            className="duration-150 active:scale-.98] hover:scale-[1.03] p-2 rounded-full bg-slate-800 shadow-slate-900 shadow-md gap-2 "
+          >
+            <BsGithub size={20} />
+          </Link>
+          <Tooltip id="github-tooltip" place="bottom" variant="dark" className="font-semibold tracking-wide" />
+        </div>
+      </div>
     </section>
   );
 };
