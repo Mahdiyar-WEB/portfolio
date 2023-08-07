@@ -27,7 +27,7 @@ const Skills = () => {
     });
   }, []);
   return (
-    <section className="mt-10" id="skills">
+    <section id="skills">
       <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-10 ">
         My Skills
       </h2>

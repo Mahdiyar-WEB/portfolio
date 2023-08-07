@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Landing = () => {
   return (
-    <section>
-      <div className="mt-10 grid place-items-center">
+    <section className="mt-10">
+      <div className=" grid place-items-center">
         <Image
           src="/images/profile.jpeg"
           alt="mahdiyar"
