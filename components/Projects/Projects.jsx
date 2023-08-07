@@ -80,7 +80,10 @@ const Projects = () => {
   };
 
   return (
-    <section className="mt-10">
+    <section id="projects" className="mt-10">
+       <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-14">
+        Projects
+      </h2>
       {projects.map(({ alt, description, id, src, url, name, github }) => {
         return (
           <div
