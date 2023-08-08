@@ -105,9 +105,9 @@ const Projects = () => {
                 fill
                 alt={alt}
               />
-              <span class="relative ms-auto z-20 flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              <span className="relative ms-auto z-20 flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
               </span>
             </Link>
             {/* body */}
@@ -121,16 +121,16 @@ const Projects = () => {
                 <Link
                   target="_blank"
                   href={github}
-                  className="px-3 py-1 shadow-md shadow-slate-900 duration-150 hover:scale-110"
+                  className="px-3 py-1 shadow-md shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
                   data-tooltip-id="github-tooltip"
-                  data-tooltip-content="Github"
+                  data-tooltip-content="Source"
                   data-tooltip-delay-show={800}
                 >
                   <BsGithub size={24} />
                 </Link>
                 <CopyToClipboard text={url} onCopy={copyHandler}>
                   <button
-                    className="shadow-md px-3 py-1 shadow-slate-900 duration-150 hover:scale-110"
+                    className="shadow-md px-3 py-1 shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
                     data-tooltip-id="link-tooltip"
                     data-tooltip-content="Copy Link"
                     data-tooltip-delay-show={800}
@@ -154,7 +154,7 @@ const Projects = () => {
               <Link
                 target="_blank"
                 href={url}
-                className="text-center overflow-hidden flex items-center group/button bg-blue-500 px-6 py-2 rounded-sm"
+                className="text-center overflow-hidden flex items-center group/button bg-blue-500 px-6 py-2 rounded-sm active:scale-[.98]"
               >
                 Visit
                 <HiArrowNarrowRight

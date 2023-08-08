@@ -10,7 +10,7 @@ const Contact = () => {
       <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-10">
         Contact Me
       </h2>
-      <div className="rounded-md flex flex-col gap-y-8 px-6 py-6 relative shadow-md shadow-blue-600 border border-sky-500 ">
+      <div className="md:w-96 mx-auto rounded-md flex flex-col gap-y-8 px-6 py-6 relative shadow-md shadow-blue-600 border border-sky-500 ">
         <p className="text-justify text-lg">
           I’m always open to new opportunities and collaborations, so feel free
           to reach out to me using my social media links
