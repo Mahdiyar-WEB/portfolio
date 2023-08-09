@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Landing = () => {
   return (
-    <section className="mt-10">
-      <div className=" grid place-items-center">
+    <section className="mt-10 md:flex md:flex-row-reverse md:items-center md:justify-evenly">
+      <div className="grid place-items-center">
         <Image
           src="/images/profile.jpeg"
           alt="mahdiyar"
@@ -14,12 +14,14 @@ const Landing = () => {
           priority={true}
         />
       </div>
-      <h1 className="text-3xl mt-6 font-sans text-center">
-        Hi, I'm Mahdiyar Marvi{" "}
-      </h1>
-      <h2 className="text-2xl mt-2 text-center text-blue-500 font-sans">
-        Front-end Developer
-      </h2>
+      <div className="mt-6 ">
+        <h1 className="text-3xl font-sans text-center">
+          Hi, I'm Mahdiyar Marvi{" "}
+        </h1>
+        <h2 className="text-2xl mt-2 text-center text-blue-500 font-sans">
+          Front-end Developer
+        </h2>
+      </div>
     </section>
   );
 };

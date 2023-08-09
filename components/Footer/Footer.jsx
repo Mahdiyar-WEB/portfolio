@@ -12,10 +12,6 @@ const links = [
 const Footer = () => {
   const handleGoTop = () => {
     window.scrollTo(0, 0);
-    console.log(
-      "🚀 ~ file: Footer.jsx:16 ~ handleGoTop ~ localStorage.theme:",
-      localStorage.theme
-    );
   };
 
   return (
@@ -37,7 +33,7 @@ const Footer = () => {
           return (
             <li key={title}>
               <Link
-                className="text-gray-500 duration-150 hover:text-gray-300 font-semibold"
+                className="text-gray-400 capitalize duration-150 hover:text-gray-300 font-semibold"
                 href={href}
               >
                 {title}
@@ -52,7 +48,7 @@ const Footer = () => {
         variant="dark"
         className="font-semibold tracking-wide"
       />
-      <small className="text-center inline-block w-full">made with ❤️</small>
+      <small className="text-center inline-block w-full font-sans">made with ❤️</small>
     </footer>
   );
 };

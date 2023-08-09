@@ -8,8 +8,8 @@ import { IoClose } from "react-icons/io5";
 import { Tooltip } from "react-tooltip";
 
 const links = [
-  { title: "skills", href: "#skills" },
   { title: "projects", href: "#projects" },
+  { title: "skills", href: "#skills" },
   { title: "contact", href: "#contact" },
 ];
 
@@ -54,9 +54,66 @@ const Header = () => {
 
   return (
     <header className="my-3 md:container md:mx-auto mx-2 px-4 py-3 rounded-md bg-transparent shadow-md shadow-slate-950 text-white flex justify-between  items-center">
-      <h1 className="text-lg font-bold font-sans bg-gradient-to-r from-orange-500 via-blue-500 to-green-400 text-transparent bg-300% bg-clip-text animate-gradient ">
-        Mahdiyar
-      </h1>
+      <div className="flex items-center gap-4">
+        <h1 className="text-lg font-bold font-sans bg-gradient-to-r from-orange-500 via-blue-500 to-green-400 text-transparent bg-300% bg-clip-text animate-gradient ">
+          Mahdiyar
+        </h1>
+        <div className="hidden md:flex relative ">
+          <button
+            type="button"
+            className="capitalize flex w-32 mx-auto items-center justify-center gap-x-1.5 rounded-md bg-gray-900 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset "
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div className="flex me-auto ms-3  items-center gap-2">
+              {activeTheme?.element}
+              {activeTheme?.title}
+            </div>
+            <svg
+              className={`h-5 w-5 me-2 text-gray-400 duration-300 ${
+                isOpen && "rotate-180"
+              }`}
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+          <div
+            className={`absolute -bottom-[115px] left-0 w-32 mx-auto rounded-md bg-gray-800 text-white shadow-lg ring-1 focus:outline-none transition-opacity duration-300 ${
+              isOpen ? "z-20" : "opacity-0 -z-20"
+            }`}
+          >
+            {themes.map(({ title, element }, index) => {
+              return index + 1 === themes.length ? (
+                <div key={title}>
+                  <hr className="h-px self-stretch opacity-20 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent" />
+                  <button
+                    onClick={() => handleChangeTheme(title)}
+                    className="w-full capitalize flex items-center gap-3 px-3 py-2 text-sm"
+                  >
+                    {element}
+                    {title}
+                  </button>
+                </div>
+              ) : (
+                <button
+                  key={title}
+                  onClick={() => handleChangeTheme(title)}
+                  className="w-full capitalize flex items-center gap-3 px-3 py-2 text-sm"
+                >
+                  {element}
+                  {title}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
       {/* other sizes  */}
       <ul className="hidden space-x-10 pe-4 capitalize font-semibold font-sans md:flex">
         {links.map(({ title, href }) => {
@@ -100,7 +157,7 @@ const Header = () => {
         >
           <button
             onClick={() => handleToggleShowItems()}
-            className="absolute top-3 right-3 text-gray-300 border border-gray-700 rounded-md active:scale-110 px-1"
+            className="absolute top-3 right-3 text-gray-300 border border-gray-700 rounded-md duration-150 hover:scale-110 active:scale-[.98] px-1"
             data-tooltip-id="close-tooltip"
             data-tooltip-content="close"
             data-tooltip-delay-show={500}
@@ -143,21 +200,22 @@ const Header = () => {
             >
               {themes.map(({ title, element }, index) => {
                 return index + 1 === themes.length ? (
-                  <>
+                  <div key={title}>
                     <hr className="h-px self-stretch opacity-20 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent" />
                     <button
+                      // key={title}
                       onClick={() => handleChangeTheme(title)}
-                      class="w-full capitalize flex items-center gap-3 px-4 py-2 text-sm"
+                      className="w-full capitalize flex items-center gap-3 px-4 py-2 text-sm"
                     >
                       {element}
                       {title}
                     </button>
-                  </>
+                  </div>
                 ) : (
                   <button
                     key={title}
                     onClick={() => handleChangeTheme(title)}
-                    class="w-full capitalize flex items-center gap-3 px-4 py-2 text-sm"
+                    className="w-full capitalize flex items-center gap-3 px-4 py-2 text-sm"
                   >
                     {element}
                     {title}
@@ -167,13 +225,15 @@ const Header = () => {
             </div>
             <button
               type="button"
-              class="capitalize flex w-40 mx-auto items-center justify-center gap-x-1.5 rounded-md bg-gray-900 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset "
+              className="capitalize flex w-40 mx-auto items-center justify-center gap-x-1.5 rounded-md bg-gray-900 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset "
               onClick={() => setIsOpen(!isOpen)}
             >
-              {activeTheme?.element}
-              {activeTheme?.title}
+              <div className="flex me-auto ms-3  items-center gap-2">
+                {activeTheme?.element}
+                {activeTheme?.title}
+              </div>
               <svg
-                className={`h-5 w-5 text-gray-400 duration-300 ${
+                className={`h-5 w-5 me-2 text-gray-400 duration-300 ${
                   isOpen && "rotate-180"
                 }`}
                 viewBox="0 0 20 20"
@@ -181,9 +241,9 @@ const Header = () => {
                 aria-hidden="true"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </button>

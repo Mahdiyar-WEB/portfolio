@@ -154,7 +154,7 @@ const Projects = () => {
               <Link
                 target="_blank"
                 href={url}
-                className="text-center overflow-hidden flex items-center group/button bg-blue-500 px-6 py-2 rounded-sm active:scale-[.98]"
+                className="text-center overflow-hidden flex items-center group/button bg-blue-500 px-6 py-2 rounded-md active:scale-[.98]"
               >
                 Visit
                 <HiArrowNarrowRight

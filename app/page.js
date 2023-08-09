@@ -11,11 +11,11 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main className="px-4 flex flex-col gap-10 text-white md:container mx-auto">
+      <main className="px-4 flex flex-col gap-10 md:gap-14 text-white md:container mx-auto">
         <Landing />
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Contact />
       </main>
       <Footer />

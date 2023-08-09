@@ -14,8 +14,4 @@ body{
   min-height: 100vh;
 }
 
-.display-none{
-  @apply hidden;
-}
-
 
