@@ -17,8 +17,9 @@ const skills = [
   { title: "MUI", stars: 4.5 },
   { title: "Formik & YUP", stars: 5 },
   { title: "Next-auth", stars: 4 },
-  { title: "mongoDB", stars: 3 },
-  { title: "Redux & Context", stars: 5 }
+  { title: "mongo db", stars: 3 },
+  { title: "Redux", stars: 5 },
+  { title: "Context", stars: 5 }
 ];
 
 const Skills = () => {
@@ -33,7 +34,7 @@ const Skills = () => {
         My Skills
       </h2>
 
-      <div className="flex align-middle flex-wrap justify-center  gap-y-8 px-2 py-4 ">
+      <div className="grid grid-cols-12 place-items-center gap-y-6 py-4">
         {skills.map(({title,stars}) => {
           return <Skill title={title} stars={stars} key={title} />;
         })}

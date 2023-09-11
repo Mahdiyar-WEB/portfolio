@@ -53,7 +53,7 @@ const Contact = () => {
           I’m always open to new opportunities and collaborations, so feel free
           to reach out to me using my social media links
         </p>
-        <div className="flex justify-center gap-6 w-full">
+        <div className="flex justify-center gap-6 px-3 w-full">
           {socials.map(({ element, href, id, tooltipContent, tooltipID }) => {
             return (
               <div className="p-2 grid place-items-center duration-150 rounded-full bg-slate-800 shadow-slate-900 shadow-md" key={id}>
