@@ -1,23 +1,24 @@
 "use client";
 import React, { useEffect } from "react";
 import Aos from "aos";
+import Skill from "./Skill/Skill";
 
 const skills = [
-  "Next JS",
-  "React JS",
-  "Javascript",
-  "Typescript",
-  "Webpack",
-  "HTML",
-  "CSS",
-  "Sass",
-  "Redux & Context",
-  "Tailwind",
-  "Bootstrap",
-  "MUI",
-  "Formik & YUP",
-  "Next-auth",
-  "mongoDB",
+  { title: "Next JS", stars: 4.5 },
+  { title: "React JS", stars: 5 },
+  { title: "Javascript", stars: 5 },
+  { title: "Typescript", stars: 2.5 },
+  { title: "Webpack", stars: 3.5 },
+  { title: "HTML", stars: 5 },
+  { title: "CSS", stars: 5 },
+  { title: "Sass", stars: 5 },
+  { title: "Tailwind", stars: 4.5 },
+  { title: "Bootstrap", stars: 5 },
+  { title: "MUI", stars: 4.5 },
+  { title: "Formik & YUP", stars: 5 },
+  { title: "Next-auth", stars: 4 },
+  { title: "mongoDB", stars: 3 },
+  { title: "Redux & Context", stars: 5 }
 ];
 
 const Skills = () => {
@@ -32,17 +33,9 @@ const Skills = () => {
         My Skills
       </h2>
 
-      <div className="flex flex-wrap gap-y-3 gap-x-2 justify-center px-2 py-4 ">
-        {skills.map((skill, index) => {
-          return (
-            <span
-              data-aos="fade-up"
-              className="py-1 px-3 bg-gray-800 w-fit font-semibold rounded-lg duration-150 hover:bg-gray-700"
-              key={index}
-            >
-              {skill}
-            </span>
-          );
+      <div className="flex align-middle flex-wrap justify-center  gap-y-8 px-2 py-4 ">
+        {skills.map(({title,stars}) => {
+          return <Skill title={title} stars={stars} key={title} />;
         })}
       </div>
     </section>
