@@ -420,9 +420,9 @@ const Skill = ({ title, stars }) => {
     }
   };
   return (
-    <div className="gap-2 grid col-span-6 px-4 py-3 shadow-slate-950 rounded-md shadow-sm bg-gray-800">
-      <p className="text-sm font-semibold">{title}</p>
-      <div class="flex items-center space-x-1">{getStars()}</div>
+    <div className="gap-2 grid col-span-6 md:col-span-3 py-4 shadow-slate-950 rounded-md shadow-sm bg-gray-800">
+      <p className="text-sm md:text-lg mx-auto font-semibold">{title}</p>
+      <div class="flex justify-center space-x-1">{getStars()}</div>
     </div>
   );
 };
