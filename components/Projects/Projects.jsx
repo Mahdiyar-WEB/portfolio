@@ -80,88 +80,87 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects">
-       <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-14">
+    <section id="projects" className="md:grid gap-8 grid-cols-12">
+      <h2 className="col-span-12 font-bold text-3xl font-sans text-center drop-shadow-2xl mb-14">
         Projects
       </h2>
       {projects.map(({ alt, description, id, src, url, name, github }) => {
         return (
-          <div
-            className="flex flex-col bg-gray-800 border-slate-950 rounded-md shadow-xl py-3 px-2 mb-14"
-            key={id}
-          >
-            {/* header */}
-            <Link
-              target="_blank"
-              href={url}
-              after-dynamic-value="click to display"
-              className="aspect-w-16 -translate-y-8 aspect-h-9 -mb-2 relative before:absolute before:bottom-0 before:rounded-md before:left-0 before:w-full before:grid before:bg-black before:bg-opacity-80  rounded-md before:place-items-center before:z-10 before:opacity-0 before:duration-300 hover:before:opacity-100 before:h-full before:content-[attr(after-dynamic-value)]"
-            >
-              <Image
-                className="w-full h-full object-center object-cover rounded-md"
-                placeholder="blur"
-                blurDataURL={src}
-                src={src}
-                fill
-                alt={alt}
-              />
-              <span className="relative ms-auto z-20 flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-              </span>
-            </Link>
-            {/* body */}
-            <h3 className="text-center text-lg font-semibold mb-3 px-1">
-              {name}
-            </h3>
-            <p className="text-center mb-10 px-1">{description}</p>
-            {/* footer */}
-            <div className="flex justify-between items-center w-full px-1 overflow-hidden">
-              <div className="flex items-center gap-3">
-                <Link
-                  target="_blank"
-                  href={github}
-                  className="px-3 py-1 shadow-md shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
-                  data-tooltip-id="github-tooltip"
-                  data-tooltip-content="Source"
-                  data-tooltip-delay-show={800}
-                >
-                  <BsGithub size={24} />
-                </Link>
-                <CopyToClipboard text={url} onCopy={copyHandler}>
-                  <button
-                    className="shadow-md px-3 py-1 shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
-                    data-tooltip-id="link-tooltip"
-                    data-tooltip-content="Copy Link"
-                    data-tooltip-delay-show={800}
-                  >
-                    <BsLink45Deg size={24} />
-                  </button>
-                </CopyToClipboard>
-                <Tooltip
-                  id="github-tooltip"
-                  place="bottom"
-                  variant="dark"
-                  className="text-xs font-semibold"
-                />
-                <Tooltip
-                  id="link-tooltip"
-                  place="bottom"
-                  variant="dark"
-                  className="text-xs font-semibold"
-                />
-              </div>
+          <div key={id} className="md:col-span-6">
+            <div className="flex flex-col bg-gray-800 border-slate-950 rounded-md shadow-xl py-3 px-2 mb-14">
+              {/* header */}
               <Link
                 target="_blank"
                 href={url}
-                className="text-center overflow-hidden flex items-center group/button bg-blue-500 px-6 py-2 rounded-md active:scale-[.98]"
+                after-dynamic-value="click to display"
+                className="aspect-w-16 -translate-y-8 aspect-h-9 -mb-2 relative before:absolute before:bottom-0 before:rounded-md before:left-0 before:w-full before:grid before:bg-black before:bg-opacity-80  rounded-md before:place-items-center before:z-10 before:opacity-0 before:duration-300 hover:before:opacity-100 before:h-full before:content-[attr(after-dynamic-value)]"
               >
-                Visit
-                <HiArrowNarrowRight
-                  className="duration-300 animated translate-x-1 group-hover/button:translate-x-2"
-                  size={22}
+                <Image
+                  className="w-full h-full object-center object-cover rounded-md"
+                  placeholder="blur"
+                  blurDataURL={src}
+                  src={src}
+                  fill
+                  alt={alt}
                 />
+                <span className="relative ms-auto z-20 flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
               </Link>
+              {/* body */}
+              <h3 className="text-center text-lg font-semibold mb-3 px-1">
+                {name}
+              </h3>
+              <p className="text-center mb-10 px-1">{description}</p>
+              {/* footer */}
+              <div className="flex justify-between items-center w-full px-1 overflow-hidden">
+                <div className="flex items-center gap-3">
+                  <Link
+                    target="_blank"
+                    href={github}
+                    className="px-3 py-1 shadow-md shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
+                    data-tooltip-id="github-tooltip"
+                    data-tooltip-content="Source"
+                    data-tooltip-delay-show={800}
+                  >
+                    <BsGithub size={24} />
+                  </Link>
+                  <CopyToClipboard text={url} onCopy={copyHandler}>
+                    <button
+                      className="shadow-md px-3 py-1 shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
+                      data-tooltip-id="link-tooltip"
+                      data-tooltip-content="Copy Link"
+                      data-tooltip-delay-show={800}
+                    >
+                      <BsLink45Deg size={24} />
+                    </button>
+                  </CopyToClipboard>
+                  <Tooltip
+                    id="github-tooltip"
+                    place="bottom"
+                    variant="dark"
+                    className="text-xs font-semibold"
+                  />
+                  <Tooltip
+                    id="link-tooltip"
+                    place="bottom"
+                    variant="dark"
+                    className="text-xs font-semibold"
+                  />
+                </div>
+                <Link
+                  target="_blank"
+                  href={url}
+                  className="text-center overflow-hidden flex items-center group/button bg-blue-500 px-6 py-2 rounded-md active:scale-[.98]"
+                >
+                  Visit
+                  <HiArrowNarrowRight
+                    className="duration-300 animated translate-x-1 group-hover/button:translate-x-2"
+                    size={22}
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         );
