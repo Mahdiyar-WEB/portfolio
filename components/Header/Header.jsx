@@ -66,7 +66,7 @@ const Header = () => {
           >
             <div className="flex me-auto ms-3  items-center gap-2">
               {activeTheme?.element}
-              {activeTheme?.title}
+              <p>Theme</p>
             </div>
             <svg
               className={`h-5 w-5 me-2 text-gray-400 duration-300 ${
@@ -230,7 +230,7 @@ const Header = () => {
             >
               <div className="flex me-auto ms-3  items-center gap-2">
                 {activeTheme?.element}
-                {activeTheme?.title}
+                <p>Theme</p>
               </div>
               <svg
                 className={`h-5 w-5 me-2 text-gray-400 duration-300 ${
