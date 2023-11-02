@@ -48,7 +48,7 @@ const Footer = () => {
         variant="dark"
         className="font-semibold tracking-wide"
       />
-      <small className="text-center inline-block w-full font-sans">made with ❤️</small>
+      <small className="text-center inline-block w-full font-sans mb-3">made with ❤️</small>
     </footer>
   );
 };
