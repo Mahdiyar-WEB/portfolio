@@ -19,7 +19,7 @@ const skills = [
   { title: "Next-auth", stars: 4 },
   { title: "mongo db", stars: 3 },
   { title: "Redux", stars: 5 },
-  { title: "Context", stars: 5 }
+  { title: "Context", stars: 5 },
 ];
 
 const Skills = () => {
@@ -33,8 +33,8 @@ const Skills = () => {
       <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-10 ">
         My Skills
       </h2>
-      <div className="grid grid-cols-12 gap-x-6 gap-y-6 py-4">
-        {skills.map(({title,stars}) => {
+      <div className="grid grid-cols-12 lg:grid-cols-10  gap-x-6 gap-y-6 py-4">
+        {skills.map(({ title, stars }) => {
           return <Skill title={title} stars={stars} key={title} />;
         })}
       </div>

@@ -7,7 +7,7 @@ const Skill = ({ title, stars }) => {
         return (
           <>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -25,7 +25,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#1F2937"
@@ -34,7 +34,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#1F2937"
@@ -43,7 +43,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#1F2937"
@@ -57,7 +57,7 @@ const Skill = ({ title, stars }) => {
         return (
           <>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -75,7 +75,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#1F2937"
@@ -84,7 +84,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#1F2937"
@@ -93,7 +93,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#1F2937"
@@ -107,7 +107,7 @@ const Skill = ({ title, stars }) => {
         return (
           <>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -125,7 +125,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 22 20"
@@ -140,7 +140,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#0F172A"
@@ -149,7 +149,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#0F172A"
@@ -163,7 +163,7 @@ const Skill = ({ title, stars }) => {
         return (
           <>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -181,7 +181,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -190,7 +190,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#0F172A"
@@ -199,7 +199,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#0F172A"
@@ -213,7 +213,7 @@ const Skill = ({ title, stars }) => {
         return (
           <>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -231,7 +231,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -240,7 +240,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 22 20"
@@ -253,7 +253,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#0F172A"
@@ -267,7 +267,7 @@ const Skill = ({ title, stars }) => {
         return (
           <>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -285,7 +285,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -294,7 +294,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -303,7 +303,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="#0F172A"
@@ -317,7 +317,7 @@ const Skill = ({ title, stars }) => {
         return (
           <>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -335,7 +335,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -344,7 +344,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -353,7 +353,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 22 20"
@@ -371,7 +371,7 @@ const Skill = ({ title, stars }) => {
         return (
           <>
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -380,7 +380,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>{" "}
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -389,7 +389,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>{" "}
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -398,7 +398,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>{" "}
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -407,7 +407,7 @@ const Skill = ({ title, stars }) => {
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
             </svg>{" "}
             <svg
-              class="w-4 h-4 text-yellow-300"
+              className="w-4 h-4 text-yellow-300"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -420,9 +420,9 @@ const Skill = ({ title, stars }) => {
     }
   };
   return (
-    <div className="gap-2 grid col-span-6 md:col-span-3 py-4 shadow-slate-950 rounded-md shadow-sm bg-gray-800">
+    <div className="gap-2 grid col-span-6 md:col-span-3 lg:col-span-2 lg:last:col-start-5 py-4 shadow-slate-950 rounded-md shadow-sm bg-gray-800">
       <p className="text-sm md:text-lg mx-auto font-semibold">{title}</p>
-      <div class="flex justify-center space-x-1">{getStars()}</div>
+      <div className="flex justify-center space-x-1">{getStars()}</div>
     </div>
   );
 };
