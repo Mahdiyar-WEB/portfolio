@@ -7,6 +7,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { Tooltip } from "react-tooltip";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { toast } from "react-hot-toast";
+import Atropos from "atropos/react";
 
 const projects = [
   {
@@ -82,39 +83,48 @@ const Projects = () => {
   return (
     <section id="projects" className="md:grid gap-8 grid-cols-12">
       <h2 className="col-span-12 font-bold text-3xl font-sans text-center drop-shadow-2xl mb-14">
-        Projects
+       My Projects
       </h2>
       {projects.map(({ alt, description, id, src, url, name, github }) => {
         return (
-          <div key={id} className="md:col-span-6">
-            <div className="flex flex-col bg-gray-800 border-slate-950 rounded-md shadow-xl py-3 px-2 mb-14">
+          <div
+            key={id}
+            className="md:col-span-6 md:last:col-start-4 lg:col-span-4 lg:last:col-start-5"
+          >
+            <div className="flex flex-col bg-gray-800 ring-1 ring-blue-500 border-slate-950 rounded-md shadow-xl py-3 px-2 mb-14">
               {/* header */}
-              <Link
-                target="_blank"
-                href={url}
-                after-dynamic-value="click to display"
-                className="aspect-w-16 -translate-y-8 aspect-h-9 -mb-2 relative before:absolute before:bottom-0 before:rounded-md before:left-0 before:w-full before:grid before:bg-black before:bg-opacity-80  rounded-md before:place-items-center before:z-10 before:opacity-0 before:duration-300 hover:before:opacity-100 before:h-full before:content-[attr(after-dynamic-value)]"
-              >
-                <Image
-                  className="w-full h-full object-center object-cover rounded-md"
-                  placeholder="blur"
-                  blurDataURL={src}
-                  src={src}
-                  fill
-                  alt={alt}
-                />
-                <span className="relative ms-auto z-20 flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-              </Link>
+              <div className="-translate-y-8">
+                <Atropos highlight={false}>
+                  <Link
+                    target="_blank"
+                    href={url}
+                    // after-dynamic-value="click to display"
+                    // before:absolute before:bottom-0 before:rounded-md before:left-0 before:w-full before:grid before:bg-black before:bg-opacity-80  rounded-md before:place-items-centerbefore:z-10 before:opacity-0 before:duration-300 hover:before:opacity-100 before:h-full before:content-[attr(after-dynamic-value)]
+                    className="aspect-w-16 block rounded-md aspect-h-9 -mb-2 overflow-visible"
+                  >
+                    <Image
+                      className="w-full h-full object-center object-cover rounded-md"
+                      placeholder="blur"
+                      blurDataURL={src}
+                      src={src}
+                      fill
+                      quality={50}
+                      alt={alt}
+                    />
+                    <span className="relative ms-auto z-20 flex h-3 w-3">
+                      <span className="animate-ping absolute right-2 top-1 inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex right-2 top-1 rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                  </Link>
+                </Atropos>
+              </div>
               {/* body */}
               <h3 className="text-center text-lg font-semibold mb-3 px-1">
                 {name}
               </h3>
               <p className="text-center mb-10 px-1">{description}</p>
               {/* footer */}
-              <div className="flex justify-between items-center w-full px-1 overflow-hidden">
+              <div className="flex justify-between items-center w-full px-1 overflow-hidden pb-3">
                 <div className="flex items-center gap-3">
                   <Link
                     target="_blank"
