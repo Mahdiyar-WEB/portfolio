@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main className="px-4 flex flex-col gap-10 md:gap-14 text-white md:container mx-auto">
+      <main className="px-6 md:px-4 lg:px-10 flex flex-col gap-10 md:gap-14 text-white md:container mx-auto">
         <Landing />
         <About />
         <Projects />

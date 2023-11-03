@@ -1,5 +1,6 @@
 "use client";
 import "./globals.css";
+import "atropos/css";
 import "aos/dist/aos.css";
 import { Inter } from "next/font/google";
 import visbyFont from "@/constants/visbyFont";
