@@ -8,6 +8,7 @@ const Landing = () => {
         <Image
           src="/images/profile.jpeg"
           alt="mahdiyar"
+          quality={100}
           className="rounded-s-[40px] rounded-e-[40px] ring-2"
           width={200}
           height={200}
@@ -16,7 +17,7 @@ const Landing = () => {
       </div>
       <div className="mt-6 ">
         <h1 className="text-3xl font-sans text-center">
-          Hi, I'm Mahdiyar Marvi{" "}
+          Hi, I&apos;m Mahdiyar Marvi{" "}
         </h1>
         <h2 className="text-2xl mt-2 text-center text-blue-500 font-sans">
           Front-end Developer
