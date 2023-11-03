@@ -48,15 +48,19 @@ const Contact = () => {
       <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-10">
         Contact Me
       </h2>
-      <div className="sm:w-96 md:w-5/6 mx-auto rounded-md flex flex-col gap-y-8 px-6 py-6 relative shadow-md shadow-blue-600 border border-sky-500 ">
+      <div className="sm:w-96 md:w-5/6 lg:w-3/5 mx-auto rounded-md flex flex-col gap-y-8 px-6 py-6 relative shadow-md shadow-blue-600 border border-sky-500 ">
         <p className="text-justify text-lg leading-8">
-          I’m always open to new opportunities and collaborations, so feel free
-          to reach out to me using my social media links
+          I love to explore new possibilities and work with others who share my
+          passion for web development. If you want to get in touch with me, you
+          can find me on my social media platforms.
         </p>
-        <div className="flex justify-center gap-6 px-3 w-full">
+        <div className="flex justify-center gap-5 px-3 w-full">
           {socials.map(({ element, href, id, tooltipContent, tooltipID }) => {
             return (
-              <div className="p-2 grid place-items-center duration-150 rounded-full bg-slate-800 shadow-slate-900 shadow-md" key={id}>
+              <div
+                className="p-2 grid place-items-center duration-150 rounded-full bg-slate-800 shadow-slate-900 shadow-md"
+                key={id}
+              >
                 <Link
                   data-tooltip-id={tooltipID}
                   data-tooltip-content={tooltipContent}
