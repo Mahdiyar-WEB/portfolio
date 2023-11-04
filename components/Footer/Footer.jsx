@@ -21,7 +21,7 @@ const Footer = () => {
         data-tooltip-id="top-tooltip"
         data-tooltip-content="Go Top"
         data-tooltip-delay-show={500}
-        className="dark:bg-gray-800 p-2 group/button rounded-full mx-auto block -translate-y-8 dark:-translate-y-7 ring-1 bg-slate-500 ring-slate-600 dark:ring dark:ring-slate-950"
+        className="dark:bg-gray-800 p-2 group/button rounded-full mx-auto block -translate-y-8 dark:-translate-y-7 ring-1 bg-slate-500 ring-slate-500 dark:ring dark:ring-slate-950"
       >
         <IoIosArrowUp
           className="duration-300 group-hover/button:-translate-y-1"
