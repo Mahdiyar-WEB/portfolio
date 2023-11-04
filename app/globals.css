@@ -10,7 +10,6 @@ body{
   padding: 0;
   position: relative;
   user-select: none;
-  background: #0f172a;
   min-height: 100vh;
 }
 #half-stars{
@@ -18,7 +17,7 @@ body{
  }
 
 #next-logo{
-  animation: infinite linear alternate 8s next-logo;
+  animation: infinite linear alternate 12s next-logo;
 }
 
 @keyframes next-logo {
@@ -34,7 +33,7 @@ body{
 }
 
 #html-logo{
-  animation: infinite linear alternate 8s html-logo;
+  animation: infinite linear alternate 12s html-logo;
 }
 
 @keyframes html-logo {
@@ -50,7 +49,7 @@ body{
 }
 
 #typescript-logo{
-  animation: infinite linear alternate 8s typescript-logo;
+  animation: infinite linear alternate 12s typescript-logo;
 }
 
 @keyframes typescript-logo {
@@ -66,7 +65,7 @@ body{
 }
 
 #react-logo{
-  animation: infinite linear alternate 10s  react-logo;
+  animation: infinite linear alternate 14s  react-logo;
 }
 
 @keyframes react-logo {
@@ -82,7 +81,7 @@ body{
 }
 
 #css-logo{
-  animation: infinite linear alternate 10s css-logo;
+  animation: infinite linear alternate 14s css-logo;
 }
 
 @keyframes css-logo {
@@ -98,7 +97,7 @@ body{
 }
 
 #javascript-logo{
-  animation: infinite linear alternate 10s javascript-logo;
+  animation: infinite linear alternate 14s javascript-logo;
 }
 
 @keyframes javascript-logo {
