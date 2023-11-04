@@ -45,10 +45,10 @@ const socials = [
 const Contact = () => {
   return (
     <section id="contact" className="mb-24">
-      <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-10">
+      <h2 className="font-bold text-3xl font-sans dark:text-white text-slate-600 text-center drop-shadow-2xl mb-10">
         Contact Me
       </h2>
-      <div className="sm:w-96 md:w-5/6 lg:w-3/5 mx-auto rounded-md flex flex-col gap-y-8 px-6 py-6 relative shadow-md shadow-blue-600 border border-sky-500 ">
+      <div className="sm:w-96 md:w-5/6 lg:w-3/5 mx-auto rounded-md flex flex-col gap-y-8 px-6 py-6 dark:text-white text-slate-800 relative shadow-md shadow-blue-600 border border-sky-500 ">
         <p className="text-justify text-lg leading-8">
           I love to explore new possibilities and work with others who share my
           passion for web development. If you want to get in touch with me, you
@@ -58,7 +58,7 @@ const Contact = () => {
           {socials.map(({ element, href, id, tooltipContent, tooltipID }) => {
             return (
               <div
-                className="p-2 grid place-items-center duration-150 rounded-full bg-slate-800 shadow-slate-900 shadow-md"
+                className="p-2 grid place-items-center duration-150 rounded-full text-white bg-zinc-500 shadow-sm shadow-slate-700 dark:bg-slate-800 dark:shadow-slate-900 dark:shadow-md"
                 key={id}
               >
                 <Link
