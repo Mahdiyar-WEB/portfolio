@@ -81,8 +81,8 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="md:grid gap-8 grid-cols-12">
-      <h2 className="col-span-12 font-bold text-3xl font-sans text-center drop-shadow-2xl mb-14">
+    <section id="projects" className="md:grid gap-12 grid-cols-12">
+      <h2 className="col-span-12 dark:text-white text-slate-600 font-bold text-3xl font-sans text-center drop-shadow-2xl mb-16 sm:mb-8">
        My Projects
       </h2>
       {projects.map(({ alt, description, id, src, url, name, github }) => {
@@ -91,10 +91,10 @@ const Projects = () => {
             key={id}
             className="md:col-span-6 md:last:col-start-4 lg:col-span-4 lg:last:col-start-5"
           >
-            <div className="flex flex-col bg-gray-800 ring-1 ring-blue-500 border-slate-950 rounded-md shadow-xl py-3 px-2 mb-14">
+            <div className="flex flex-col dark:bg-gray-800 dark:text-white text-slate-600 ring-1 ring-blue-500 border-slate-950 rounded-md shadow-md dark:shadow-xl py-3 px-2 mb-14">
               {/* header */}
               <div className="-translate-y-8">
-                <Atropos highlight={false}>
+                <Atropos highlight={false} className="shadow-lg" shadowScale={0.8} >
                   <Link
                     target="_blank"
                     href={url}
@@ -103,7 +103,7 @@ const Projects = () => {
                     className="aspect-w-16 block rounded-md aspect-h-9 -mb-2 overflow-visible"
                   >
                     <Image
-                      className="w-full h-full object-center object-cover rounded-md"
+                      className="w-full h-full object-center object-cover rounded-md border border-stone-300 dark:border-none"
                       placeholder="blur"
                       blurDataURL={src}
                       src={src}
@@ -129,7 +129,7 @@ const Projects = () => {
                   <Link
                     target="_blank"
                     href={github}
-                    className="px-3 py-1 shadow-md shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
+                    className="px-3 py-1 dark:shadow-md shadow-sm shadow-stone-400 border border-stone-200 rounded-sm dark:border-none dark:shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
                     data-tooltip-id="github-tooltip"
                     data-tooltip-content="Source"
                     data-tooltip-delay-show={800}
@@ -138,7 +138,7 @@ const Projects = () => {
                   </Link>
                   <CopyToClipboard text={url} onCopy={copyHandler}>
                     <button
-                      className="shadow-md px-3 py-1 shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
+                      className="dark:shadow-md shadow-sm shadow-stone-400 border border-stone-200 rounded-sm dark:border-none px-3 py-1 dark:shadow-slate-950 duration-150 hover:scale-110 active:scale-[.98]"
                       data-tooltip-id="link-tooltip"
                       data-tooltip-content="Copy Link"
                       data-tooltip-delay-show={800}
@@ -162,7 +162,7 @@ const Projects = () => {
                 <Link
                   target="_blank"
                   href={url}
-                  className="text-center overflow-hidden flex items-center group/button bg-blue-500 px-6 py-2 rounded-md active:scale-[.98]"
+                  className="text-center overflow-hidden flex items-center group/button text-white bg-blue-500 px-6 py-2 rounded-md active:scale-[.98]"
                 >
                   Visit
                   <HiArrowNarrowRight
