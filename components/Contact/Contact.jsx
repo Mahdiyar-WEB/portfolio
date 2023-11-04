@@ -48,7 +48,7 @@ const Contact = () => {
       <h2 className="font-bold text-3xl font-sans dark:text-white text-slate-600 text-center drop-shadow-2xl mb-10">
         Contact Me
       </h2>
-      <div className="sm:w-96 md:w-5/6 lg:w-3/5 mx-auto rounded-md flex flex-col gap-y-8 px-6 py-6 dark:text-white text-slate-800 relative shadow-md shadow-blue-600 border border-sky-500 ">
+      <div className="sm:w-96 md:w-5/6 lg:w-3/5 mx-auto rounded-md flex flex-col gap-y-8 px-6 py-6 dark:text-white text-slate-800 relative shadow-sm dark:shadow-md shadow-blue-600 dark:shadow-blue-600 border border-sky-500 ">
         <p className="text-justify text-lg leading-8">
           I love to explore new possibilities and work with others who share my
           passion for web development. If you want to get in touch with me, you
