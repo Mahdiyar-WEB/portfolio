@@ -30,7 +30,7 @@ const Skills = () => {
   }, []);
   return (
     <section id="skills">
-      <h2 className="font-bold text-3xl font-sans text-center drop-shadow-2xl mb-10 ">
+      <h2 className="font-bold dark:text-white text-slate-600 text-3xl font-sans text-center drop-shadow-2xl mb-10 ">
         My Skills
       </h2>
       <div className="grid grid-cols-12 lg:grid-cols-10  gap-x-6 gap-y-6 py-4">
