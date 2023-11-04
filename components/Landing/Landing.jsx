@@ -16,7 +16,7 @@ const Landing = () => {
         />
       </div>
       <div className="mt-6 ">
-        <h1 className="text-3xl font-sans text-center">
+        <h1 className="text-3xl font-sans text-center dark:text-white text-slate-600">
           Hi, I&apos;m Mahdiyar Marvi{" "}
         </h1>
         <h2 className="text-2xl mt-2 text-center text-blue-500 font-sans">
