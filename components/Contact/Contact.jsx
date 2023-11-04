@@ -58,7 +58,7 @@ const Contact = () => {
           {socials.map(({ element, href, id, tooltipContent, tooltipID }) => {
             return (
               <div
-                className="p-2 grid place-items-center duration-150 rounded-full text-white bg-zinc-500 shadow-sm shadow-slate-700 dark:bg-slate-800 dark:shadow-slate-900 dark:shadow-md"
+                className=" grid place-items-center rounded-full text-white bg-zinc-500 shadow-sm shadow-slate-700 dark:bg-slate-800 dark:shadow-slate-900 dark:shadow-md"
                 key={id}
               >
                 <Link
@@ -67,7 +67,7 @@ const Contact = () => {
                   data-tooltip-delay-show={500}
                   href={href}
                   target="_blank"
-                  className="w-full h-full"
+                  className="w-full h-full p-2 rounded-full"
                 >
                   {element}
                 </Link>

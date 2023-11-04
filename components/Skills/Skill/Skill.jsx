@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 const Skill = ({ title, stars }) => {
-  const [isDark, setIsDark] = useState(
-    localStorage.getItem("theme") === "dark" ? true : false
-  );
   const getStars = () => {
     switch (stars) {
       case 1:

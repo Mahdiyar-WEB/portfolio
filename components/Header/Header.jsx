@@ -31,11 +31,6 @@ const Header = () => {
   }, []);
 
   const handleChangeTheme = (title) => {
-    if (title === "system") {
-      const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    }
     title === "system" &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
       ? document.documentElement.classList.add("dark")
@@ -252,7 +247,9 @@ const Header = () => {
                 </svg>
               </button>
             </div>
-            <p className="text-center text-lg font-sans pb-4 bg-gradient-to-r from-orange-500 via-blue-500 to-green-400 text-transparent bg-300% bg-clip-text animate-gradient">Mahdiyar</p>
+            <p className="text-center text-lg font-sans pb-4 bg-gradient-to-r from-orange-500 via-blue-500 to-green-400 text-transparent bg-300% bg-clip-text animate-gradient">
+              Mahdiyar
+            </p>
           </div>
         </aside>
       </div>
