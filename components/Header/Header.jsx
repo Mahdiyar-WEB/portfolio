@@ -54,7 +54,7 @@ const Header = () => {
 
   return (
     <header className="px-6">
-      <div className="my-3 md:container md:mx-auto mx-2 px-4 py-3 rounded-md bg-transparent shadow-md shadow-slate-950 text-white flex justify-between  items-center">
+      <div className="my-3 md:container md:mx-auto mx-2 px-4 py-3 rounded-md dark:bg-transparent shadow-md border dark:border-none shadow-stone-300 bg-white text-slate-600 dark:shadow-slate-950 dark:text-white flex justify-between  items-center">
         <div className="flex items-center gap-4">
           <h1 className="text-lg font-bold font-sans bg-gradient-to-r from-orange-500 via-blue-500 to-green-400 text-transparent bg-300% bg-clip-text animate-gradient ">
             Mahdiyar
@@ -62,7 +62,7 @@ const Header = () => {
           <div className="hidden md:flex relative ">
             <button
               type="button"
-              className="capitalize flex w-32 mx-auto items-center justify-center gap-x-1.5 rounded-md bg-gray-900 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset "
+              className="capitalize flex w-32 mx-auto items-center justify-center gap-x-1.5 rounded-md text-slate-700 dark:bg-gray-900 py-2 text-sm font-semibold dark:text-white shadow-sm ring-1 ring-inset "
               onClick={() => setIsOpen(!isOpen)}
             >
               <div className="flex me-auto ms-3  items-center gap-2">
@@ -85,14 +85,14 @@ const Header = () => {
               </svg>
             </button>
             <div
-              className={`absolute -bottom-[115px] left-0 w-32 mx-auto rounded-md bg-gray-800 text-white shadow-lg ring-1 focus:outline-none transition-opacity duration-300 ${
+              className={`absolute -bottom-[115px] left-0 w-32 mx-auto rounded-md bg-white dark:bg-gray-800 dark:text-white shadow-lg ring-1 focus:outline-none transition-opacity duration-300 ${
                 isOpen ? "z-20" : "opacity-0 -z-20"
               }`}
             >
               {themes.map(({ title, element }, index) => {
                 return index + 1 === themes.length ? (
                   <div key={title}>
-                    <hr className="h-px self-stretch opacity-20 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent" />
+                    <hr className="h-px self-stretch dark:opacity-20 bg-slate-100 dark:bg-gradient-to-tr  dark:from-transparent dark:via-neutral-500 dark:to-transparent" />
                     <button
                       onClick={() => handleChangeTheme(title)}
                       className="w-full capitalize flex items-center gap-3 px-3 py-2 text-sm"
@@ -128,7 +128,7 @@ const Header = () => {
         {/* mobile size */}
         <button
           onClick={() => handleToggleShowItems()}
-          className="border border-gray-600 md:hidden rounded-md py-1 px-2"
+          className="border border-gray-300 dark:border-gray-600 md:hidden rounded-md py-1 px-2"
           data-tooltip-id="menu-tooltip"
           data-tooltip-content="Menu"
           data-tooltip-delay-show={500}
@@ -142,7 +142,7 @@ const Header = () => {
           className="font-semibold tracking-wide"
         />
         <div
-          className={`fixed top-0 right-0 w-full h-screen duration-300 md:hidden  bg-black ${
+          className={`fixed top-0 right-0 w-full h-screen duration-300 md:hidden bg-black ${
             showItems ? "bg-opacity-70 z-10" : "-z-10 bg-opacity-0"
           }`}
         ></div>
@@ -156,11 +156,11 @@ const Header = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`flex flex-col ms-auto h-full w-3/5 relative bg-slate-900 shadow-2xl shadow-slate-950 text-white`}
+            className={`flex flex-col ms-auto h-full w-3/5 relative bg-white text-slate-700 dark:bg-slate-900 shadow-2xl shadow-slate-950 dark:text-white`}
           >
             <button
               onClick={() => handleToggleShowItems()}
-              className="absolute top-3 right-3 text-gray-300 border border-gray-700 rounded-md duration-150 hover:scale-110 active:scale-[.98] px-1"
+              className="absolute top-3 right-3 text-slate-500 dark:text-gray-300 border border-gray-300 dark:border-gray-700 rounded-md duration-150 hover:scale-110 active:scale-[.98] px-1"
               data-tooltip-id="close-tooltip"
               data-tooltip-content="close"
               data-tooltip-delay-show={500}
@@ -189,22 +189,23 @@ const Header = () => {
                     <hr
                       className={`${
                         index + 1 === links.length && "hidden"
-                      }  h-px self-stretch opacity-20 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent`}
+                      }  h-px self-stretch opacity-20 bg-slate-900 dark:bg-gradient-to-tr dark:from-transparent dark:via-neutral-500 dark:to-transparent`}
                     />
                   </li>
                 );
               })}
             </ul>
+            {/* Themes */}
             <div className="mt-auto flex flex-col mb-4">
               <div
-                className={` mb-2 w-40 mx-auto rounded-md bg-gray-800 text-white shadow-lg ring-1 focus:outline-none transition-opacity duration-300 ${
+                className={` mb-2 font-semibold w-40 mx-auto rounded-md dark:bg-gray-800 dark:text-white shadow-md dark:shadow-lg ring-1 focus:outline-none transition-opacity duration-300 ${
                   isOpen ? "z-20" : "opacity-0 -z-20"
                 }`}
               >
                 {themes.map(({ title, element }, index) => {
                   return index + 1 === themes.length ? (
                     <div key={title}>
-                      <hr className="h-px self-stretch opacity-20 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent" />
+                      <hr className="h-px self-stretch opacity-20 bg-slate-900 dark:bg-gradient-to-tr dark:from-transparent dark:via-neutral-500 dark:to-transparent" />
                       <button
                         // key={title}
                         onClick={() => handleChangeTheme(title)}
@@ -228,7 +229,7 @@ const Header = () => {
               </div>
               <button
                 type="button"
-                className="capitalize flex w-40 mx-auto items-center justify-center gap-x-1.5 rounded-md bg-gray-900 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-inset "
+                className="capitalize flex w-40 mx-auto items-center justify-center gap-x-1.5 rounded-md dark:bg-gray-900 dark:text-white py-3 text-sm font-semibold text-slate-700 shadow-sm ring-1 ring-inset "
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <div className="flex me-auto ms-3  items-center gap-2">
@@ -251,7 +252,7 @@ const Header = () => {
                 </svg>
               </button>
             </div>
-            <p className="text-center text-lg font-sans pb-4">Mahdiyar</p>
+            <p className="text-center text-lg font-sans pb-4 bg-gradient-to-r from-orange-500 via-blue-500 to-green-400 text-transparent bg-300% bg-clip-text animate-gradient">Mahdiyar</p>
           </div>
         </aside>
       </div>
