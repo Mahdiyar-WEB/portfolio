@@ -137,7 +137,7 @@ const Header = () => {
           className="font-semibold tracking-wide"
         />
         <div
-          className={`fixed top-0 right-0 w-full h-screen duration-300 md:hidden bg-black ${
+          className={`fixed top-0 right-0 w-full h-full duration-300 transition-opacity md:hidden bg-black ${
             showItems ? "bg-opacity-70 z-10" : "-z-10 bg-opacity-0"
           }`}
         ></div>
@@ -146,7 +146,7 @@ const Header = () => {
             showItems
               ? "opacity-100 translate-x-0"
               : "opacity-0 translate-x-full"
-          } duration-300 ease-out fixed left-0 top-0 w-full h-screen md:hidden z-20`}
+          } duration-300 ease-out fixed left-0 top-0 w-full h-full md:hidden z-20`}
           onClick={() => handleToggleShowItems()}
         >
           <div
