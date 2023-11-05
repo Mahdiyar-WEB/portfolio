@@ -7,6 +7,11 @@ import Projects from "@/components/Projects/Projects";
 import Skills from "@/components/Skills/Skills";
 import React from "react";
 
+export const metadata = {
+  title: "Portfolio",
+  description: "mahdiyar portfolio",
+};
+
 const Home = () => {
   return (
     <>
