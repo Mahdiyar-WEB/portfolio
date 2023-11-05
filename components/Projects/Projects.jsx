@@ -16,7 +16,7 @@ const projects = [
     src: "/images/cars-store.jpg",
     alt: "cars store",
     name: "cars store",
-    description: "cars store designed by bootstrap",
+    description: "practice project based  learning course for bootstrap 4 and 5",
     github: "https://github.com/Mahdiyar-WEB/Bootstrap4-5",
   },
   {
@@ -24,8 +24,8 @@ const projects = [
     url: "https://mahdiyar-web.github.io/Dlfox.com-Design/",
     src: "/images/dlfox-design.png",
     alt: "dlfox design",
-    name: "dlfox design",
-    description: "dlfox design",
+    name: "Dlfox design",
+    description: "implemented with html css, not responsive for all devices",
     github: "https://github.com/Mahdiyar-WEB/Dlfox.com-Design",
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     src: "/images/jobinja-design.png",
     alt: "jobinja design",
     name: "jobinja design",
-    description: "jobinja design",
+    description: "jobinja design with html, not responsive for all devices",
     github: "https://github.com/Mahdiyar-WEB/Jobinja.ir-Design",
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     src: "/images/member-panel.png",
     alt: "member panel",
     name: "member panel",
-    description: "member panel",
+    description: "customer project for selling members in telegram based on react",
     github: "https://github.com/Mahdiyar-WEB/reactToNext",
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     src: "/images/react-inventory.png",
     alt: "react inventory",
     name: "react inventory",
-    description: "react inventory",
+    description: "project to add new category and item with sort and filter options",
     github: "https://github.com/Mahdiyar-WEB/react-inventory",
   },
   {
@@ -61,16 +61,16 @@ const projects = [
     src: "/images/react-projects.png",
     alt: "react projects",
     name: "react projects",
-    description: "react projects",
+    description: "three project inside one project: todo app, expense tracker, contact app",
     github: "https://github.com/Mahdiyar-WEB/react_projects",
   },
   {
     id: 7,
     url: "https://store-eight-iota.vercel.app/",
     src: "/images/react-store.png",
-    alt: "react store",
-    name: "react store",
-    description: "react store",
+    alt: "shoes store",
+    name: "shoes store",
+    description: "store project for selling shoes",
     github: "https://github.com/Mahdiyar-WEB/react-store-static",
   },
 ];
@@ -83,18 +83,22 @@ const Projects = () => {
   return (
     <section id="projects" className="md:grid gap-12 grid-cols-12">
       <h2 className="col-span-12 dark:text-white text-slate-600 font-bold text-3xl font-sans text-center drop-shadow-2xl mb-16 sm:mb-8">
-       My Projects
+        My Projects
       </h2>
       {projects.map(({ alt, description, id, src, url, name, github }) => {
         return (
           <div
             key={id}
-            className="md:col-span-6 md:last:col-start-4 lg:col-span-4 lg:last:col-start-5"
+            className="md:col-span-6 md:last:col-start-4 lg:col-span-4 lg:last:col-start-5 grid"
           >
-            <div className="flex flex-col dark:bg-gray-800 dark:text-white text-slate-600 ring-1 ring-blue-500 border-slate-950 rounded-md shadow-md dark:shadow-xl py-3 px-2 mb-14">
+            <div className="flex flex-col items-stretch dark:bg-gray-800 dark:text-white text-slate-600 ring-1 ring-blue-500 border-slate-950 rounded-md shadow-md dark:shadow-xl py-3 px-2 mb-14">
               {/* header */}
               <div className="-translate-y-8">
-                <Atropos highlight={false} className="shadow-lg" shadowScale={0.8} >
+                <Atropos
+                  highlight={false}
+                  className="shadow-lg"
+                  shadowScale={0.8}
+                >
                   <Link
                     target="_blank"
                     href={url}
@@ -119,10 +123,10 @@ const Projects = () => {
                 </Atropos>
               </div>
               {/* body */}
-              <h3 className="text-center text-lg font-semibold mb-3 px-1">
+              <h3 className="text-center text-lg font-semibold mb-3 px-1 capitalize">
                 {name}
               </h3>
-              <p className="text-center mb-10 px-1">{description}</p>
+              <p className="text-center mb-10 px-4 flex-grow">{description}</p>
               {/* footer */}
               <div className="flex justify-between items-center w-full px-1 overflow-hidden pb-3">
                 <div className="flex items-center gap-3">
