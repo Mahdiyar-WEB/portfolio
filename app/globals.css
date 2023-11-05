@@ -111,4 +111,17 @@ body{
     transform: translateY(0px) rotate(-12deg);
   }
 }
+@media only screen and (max-width: 768px) {
+  .atropos-scale {
+    transition-property: none !important;
+    transform: none !important;
+  }
+  .atropos-rotate {
+    transition-property: none !important;
+    transform: none !important;
+  }
+  .atropos-inner {
+    animation: none !important;
+  }
+}
 

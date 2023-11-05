@@ -16,7 +16,8 @@ const projects = [
     src: "/images/cars-store.jpg",
     alt: "cars store",
     name: "cars store",
-    description: "practice project based  learning course for bootstrap 4 and 5",
+    description:
+      "practice project based  learning course for bootstrap 4 and 5",
     github: "https://github.com/Mahdiyar-WEB/Bootstrap4-5",
   },
   {
@@ -43,7 +44,8 @@ const projects = [
     src: "/images/member-panel.png",
     alt: "member panel",
     name: "member panel",
-    description: "customer project for selling members in telegram based on react",
+    description:
+      "customer project for selling members in telegram based on react",
     github: "https://github.com/Mahdiyar-WEB/reactToNext",
   },
   {
@@ -52,7 +54,8 @@ const projects = [
     src: "/images/react-inventory.png",
     alt: "react inventory",
     name: "react inventory",
-    description: "project to add new category and item with sort and filter options",
+    description:
+      "project to add new category and item with sort and filter options",
     github: "https://github.com/Mahdiyar-WEB/react-inventory",
   },
   {
@@ -61,7 +64,8 @@ const projects = [
     src: "/images/react-projects.png",
     alt: "react projects",
     name: "react projects",
-    description: "three project inside one project: todo app, expense tracker, contact app",
+    description:
+      "three project inside one project: todo app, expense tracker, contact app",
     github: "https://github.com/Mahdiyar-WEB/react_projects",
   },
   {
