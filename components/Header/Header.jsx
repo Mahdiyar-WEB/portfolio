@@ -139,12 +139,12 @@ const Header = () => {
             showItems
               ? "opacity-100 translate-x-0"
               : "opacity-0 translate-x-full"
-          } duration-300 ease-out fixed left-0 top-0 w-full h-full md:hidden z-20`}
+          } duration-300 ease-out fixed left-0 top-0 w-full h-screen md:hidden z-20`}
           onClick={() => handleToggleShowItems()}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`flex flex-col ms-auto h-full w-3/5 relative bg-white text-slate-700 dark:bg-slate-900 shadow-2xl shadow-slate-950 dark:text-white`}
+            className={`flex flex-col ms-auto h-full pb-[48px] overflow-hidden sm:pb-0 w-3/5 relative bg-white text-slate-700 dark:bg-slate-900 shadow-2xl shadow-slate-950 dark:text-white`}
           >
             <button
               onClick={() => handleToggleShowItems()}
