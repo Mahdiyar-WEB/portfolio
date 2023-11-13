@@ -144,7 +144,7 @@ const Header = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`flex flex-col ms-auto h-full pb-[48px] overflow-hidden sm:pb-0 w-3/5 relative bg-white text-slate-700 dark:bg-slate-900 shadow-2xl shadow-slate-950 dark:text-white`}
+            className={`flex flex-col ms-auto h-full pb-[58px] overflow-hidden sm:pb-0 w-3/5 relative bg-white text-slate-700 dark:bg-slate-900 shadow-2xl shadow-slate-950 dark:text-white`}
           >
             <button
               onClick={() => handleToggleShowItems()}
