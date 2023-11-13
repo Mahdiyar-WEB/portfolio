@@ -43,6 +43,7 @@ const Header = () => {
   };
 
   const handleToggleShowItems = () => {
+    document.body.style.overflow = showItems ? "visible" : "hidden";
     setIsOpen(false);
     setShowItems(!showItems);
   };
@@ -124,18 +125,10 @@ const Header = () => {
         <button
           onClick={() => handleToggleShowItems()}
           className="border border-gray-300 dark:border-gray-600 md:hidden rounded-md py-1 px-2"
-          data-tooltip-id="menu-tooltip"
-          data-tooltip-content="Menu"
           data-tooltip-delay-show={500}
         >
           <BiMenu fontSize={25} />
         </button>
-        <Tooltip
-          id="menu-tooltip"
-          place="bottom"
-          variant="dark"
-          className="font-semibold tracking-wide"
-        />
         <div
           className={`fixed top-0 right-0 w-full h-full duration-300 transition-opacity md:hidden bg-black ${
             showItems ? "bg-opacity-70 z-10" : "-z-10 bg-opacity-0"
