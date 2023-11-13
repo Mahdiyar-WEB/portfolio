@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Tooltip } from "react-tooltip";
@@ -80,8 +80,14 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [toastCounts, setToastCounts] = useState(0);
   const copyHandler = () => {
     toast.success("Link Copied");
+    toastCounts < 3 && setToastCounts(toastCounts + 1);
+    toastCounts >= 3 && toast.dismiss();
+    setTimeout(() => {
+      toastCounts !== 0 && setToastCounts(toastCounts - 1);
+    }, 2000);
   };
 
   return (
