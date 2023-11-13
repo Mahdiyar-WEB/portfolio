@@ -27,7 +27,7 @@ const Header = () => {
   useEffect(() => {
     localStorage.getItem("theme")
       ? handleChangeTheme(localStorage.getItem("theme"))
-      : handleChangeTheme(themes[0].title);
+      : handleChangeTheme(themes[2].title);
   }, []);
 
   const handleChangeTheme = (title) => {
@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <header className="sm:px-6 px-2">
-      <div className="my-3 md:container md:mx-auto mx-2 px-4 py-3 rounded-md dark:bg-transparent shadow-md border dark:border-none shadow-stone-300 bg-white text-slate-600 dark:shadow-slate-950 dark:text-white flex justify-between  items-center">
+      <div className="my-3 md:container md:mx-auto mx-2 px-4 py-3 rounded-md dark:bg-transparent shadow-md border dark:border-slate-800 shadow-stone-300 bg-white text-slate-600 dark:shadow-slate-950 dark:text-white flex justify-between  items-center">
         <div className="flex items-center gap-4">
           <h1 className="text-lg font-bold font-sans bg-gradient-to-r from-orange-500 via-blue-500 to-green-400 text-transparent bg-300% bg-clip-text animate-gradient ">
             Mahdiyar
