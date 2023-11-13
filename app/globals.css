@@ -15,6 +15,9 @@ body{
 button:active{
   background: none;
 }
+button:focus{
+  background: none;
+}
 #half-stars{
   fill : url(#solids)
  }
