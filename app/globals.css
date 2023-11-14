@@ -129,5 +129,8 @@ button:focus{
   .atropos-inner {
     animation: none !important;
   }
+  .atropos-rotate-touch{
+    touch-action: auto !important;
+  }
 }
 
