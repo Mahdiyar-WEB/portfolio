@@ -75,7 +75,7 @@ const projects = [
     alt: "shoes store",
     name: "shoes store",
     description: "store project for selling shoes",
-    github: "https://github.com/Mahdiyar-WEB/react-store-static",
+    github: "https://github.com/Mahdiyar-WEB/new_react_store",
   },
 ];
 
