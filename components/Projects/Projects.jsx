@@ -46,7 +46,7 @@ const projects = [
     name: "member panel",
     description:
       "customer project for selling members in telegram based on react",
-    github: "https://github.com/Mahdiyar-WEB/reactToNext",
+    github: "https://github.com/Mahdiyar-WEB/member-panel",
   },
   {
     id: 5,
@@ -75,7 +75,7 @@ const projects = [
     alt: "shoes store",
     name: "shoes store",
     description: "store project for selling shoes",
-    github: "https://github.com/Mahdiyar-WEB/new_react_store",
+    github: "https://github.com/Mahdiyar-WEB/shoes-store",
   },
 ];
 
