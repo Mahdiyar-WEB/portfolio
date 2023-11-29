@@ -26,7 +26,7 @@ const projects = [
     src: "/images/dlfox-design.png",
     alt: "dlfox design",
     name: "Dlfox design",
-    description: "implemented with html css, not responsive for all devices",
+    description: "implemented with html and css based on dlfox website",
     github: "https://github.com/Mahdiyar-WEB/Dlfox.com-Design",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     src: "/images/jobinja-design.png",
     alt: "jobinja design",
     name: "jobinja design",
-    description: "jobinja design with html, not responsive for all devices",
+    description: "jobinja design with html and css based on jobinja website",
     github: "https://github.com/Mahdiyar-WEB/Jobinja.ir-Design",
   },
   {
