@@ -4,14 +4,13 @@ import Image from "next/image";
 const Landing = () => {
   return (
     <section className="mt-10 md:flex md:flex-row-reverse md:items-center md:justify-evenly">
-      <div className="grid place-items-center">
+      <div className="grid place-items-center  mx-auto sm:mx-0">
         <Image
-          src="/images/profile.jpeg"
+          src="/images/profile.webp"
           alt="mahdiyar"
           quality={100}
-          className="rounded-s-[40px] rounded-e-[40px] ring-2"
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           priority={true}
         />
       </div>
