@@ -9,6 +9,7 @@ import { Tooltip } from "react-tooltip";
 
 const links = [
   { title: "projects", href: "#projects" },
+  { title: "experiences", href: "#experiences" },
   { title: "skills", href: "#skills" },
   { title: "contact", href: "#contact" },
 ];
