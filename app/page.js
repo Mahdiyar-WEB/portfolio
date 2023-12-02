@@ -1,5 +1,6 @@
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
+import Experience from "@/components/Experiences/Experiences";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Landing from "@/components/Landing/Landing";
@@ -20,6 +21,7 @@ const Home = () => {
         <Landing />
         <About />
         <Projects />
+        <Experience />
         <Skills />
         <Contact />
       </main>
