@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { BsSunFill, BsMoonFill } from "react-icons/bs";
 import { MdDesktopWindows } from "react-icons/md";
@@ -24,6 +24,10 @@ const Header = () => {
   const [showItems, setShowItems] = useState(false);
   const [activeTheme, setActiveTheme] = useState({ title: "", element: "" });
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
+  const dropdownRef2 = useRef(null);
+  const buttonRef2 = useRef(null);
 
   useEffect(() => {
     localStorage.getItem("theme")
@@ -49,6 +53,29 @@ const Header = () => {
     setShowItems(!showItems);
   };
 
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  const handleClickOutside = (event) => {
+    if (
+      isOpen &&
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target) &&
+      buttonRef.current &&
+      !buttonRef.current.contains(event.target) &&
+      dropdownRef2.current &&
+      !dropdownRef2.current.contains(event.target) &&
+      buttonRef2.current &&
+      !buttonRef2.current.contains(event.target)
+    ) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <header className="sm:px-6 px-2">
       <div className="my-3 md:container md:mx-auto mx-2 px-4 py-3 rounded-md dark:bg-transparent shadow-md border dark:border-slate-800 shadow-stone-300 bg-white text-slate-600 dark:shadow-slate-950 dark:text-white flex justify-between  items-center">
@@ -61,6 +88,7 @@ const Header = () => {
               type="button"
               className="capitalize flex w-32 mx-auto items-center justify-center gap-x-1.5 rounded-md text-slate-700 dark:bg-gray-900 py-2 text-sm font-semibold dark:text-white shadow-sm ring-1 ring-inset "
               onClick={() => setIsOpen(!isOpen)}
+              ref={buttonRef}
             >
               <div className="flex me-auto ms-3  items-center gap-2">
                 {activeTheme?.element}
@@ -82,6 +110,7 @@ const Header = () => {
               </svg>
             </button>
             <div
+              ref={dropdownRef}
               className={`absolute -bottom-[115px] left-0 w-32 mx-auto rounded-md bg-white dark:bg-gray-800 dark:text-white shadow-lg ring-1 focus:outline-none transition-opacity duration-300 ${
                 isOpen ? "z-20" : "opacity-0 -z-20"
               }`}
@@ -187,6 +216,7 @@ const Header = () => {
             {/* Themes */}
             <div className="mt-auto flex flex-col mb-4">
               <div
+                ref={dropdownRef2}
                 className={` mb-2 font-semibold w-40 mx-auto rounded-md dark:bg-gray-800 dark:text-white shadow-md dark:shadow-lg ring-1 focus:outline-none transition-opacity duration-300 ${
                   isOpen ? "z-20" : "opacity-0 -z-20"
                 }`}
@@ -217,6 +247,7 @@ const Header = () => {
                 })}
               </div>
               <button
+                ref={buttonRef2}
                 type="button"
                 className="capitalize flex w-40 mx-auto items-center justify-center gap-x-1.5 rounded-md dark:bg-gray-900 dark:text-white py-3 text-sm font-semibold text-slate-700 shadow-sm ring-1 ring-inset "
                 onClick={() => setIsOpen(!isOpen)}
