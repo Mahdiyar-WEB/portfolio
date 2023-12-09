@@ -70,7 +70,7 @@ const projects = [
   },
   {
     id: 6,
-    url: "https://common-projects.netlify.app/",
+    url: "https://react-projects-mahdiyar-web.vercel.app/",
     src: "/images/react-projects.png",
     alt: "react projects",
     name: "react projects",
