@@ -205,9 +205,9 @@ const Header = () => {
                     </Link>
 
                     <hr
-                      className={`${
-                        index + 1 === links.length && "hidden"
-                      }  h-px self-stretch opacity-20 last:opacity-100 bg-slate-900 dark:bg-gradient-to-tr dark:from-transparent dark:via-neutral-500 dark:to-transparent`}
+                      className={`h-px self-stretch ${
+                        index + 1 === links.length ? "opacity-0" : "opacity-20"
+                      } bg-slate-900 dark:bg-gradient-to-tr dark:from-transparent dark:via-neutral-500 dark:to-transparent`}
                     />
                   </li>
                 );
