@@ -196,11 +196,7 @@ const Header = () => {
             <ul className="pt-20 font-semibold flex flex-col uppercase">
               {links.map(({ title, href }, index) => {
                 return (
-                  <li
-                    onClick={() => handleToggleShowItems()}
-                    key={title}
-                    className={index + 1 === links.length ? "last-child" : ""}
-                  >
+                  <li onClick={() => handleToggleShowItems()} key={title}>
                     <Link
                       className="px-4 flex items-center justify-end w-full duration-300 ease-in hover:-translate-x-2 h-14"
                       href={href}
@@ -208,9 +204,9 @@ const Header = () => {
                       {title}
                     </Link>
 
-                    <hr
-                      className={`h-px self-stretch opacity-20 bg-slate-900 dark:bg-gradient-to-tr dark:from-transparent dark:via-neutral-500 dark:to-transparent`}
-                    />
+                    {index + 1 !== links.length && (
+                      <hr className="h-px self-stretch opacity-20 bg-slate-900 dark:bg-gradient-to-tr dark:from-transparent dark:via-neutral-500 dark:to-transparent" />
+                    )}
                   </li>
                 );
               })}
