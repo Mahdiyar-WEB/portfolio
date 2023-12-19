@@ -150,7 +150,7 @@ button:focus{
   }
 }
 @media only screen and (max-width: 760px) {
-  /* .atropos-scale {
+  .atropos-scale {
     transition-property: none !important;
     transform: none !important;
   }
@@ -160,7 +160,7 @@ button:focus{
   }
   .atropos-inner {
     animation: none !important;
-  } */
+  }
   .atropos-rotate-touch{
     touch-action: auto !important;
   }
