@@ -226,7 +226,6 @@ const Header = () => {
                     <div key={title}>
                       <hr className="h-px self-stretch opacity-20 bg-slate-900 dark:bg-gradient-to-tr dark:from-transparent dark:via-neutral-500 dark:to-transparent" />
                       <button
-                        // key={title}
                         onClick={() => handleChangeTheme(title)}
                         className="w-full capitalize flex items-center gap-3 px-4 py-2 text-sm"
                       >

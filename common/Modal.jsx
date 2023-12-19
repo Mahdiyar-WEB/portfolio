@@ -26,14 +26,14 @@ const Modal = ({ title, body, isOpen, closeHandler }) => {
     <>
       {/* overlay */}
       <div
-        className={`fixed left-0 top-0 right-0 w-full h-full modal-overlay ${
-          isOpen ? "block" : "hidden"
+        className={`fixed left-0 top-0 peer right-0 w-full h-full modal-overlay ${
+          isOpen ? "block opacity-75 transition-opacity" : "hidden"
         }`}
       ></div>
       {/* modal */}
       <div
-        className={`fixed top-0 right-0 left-0 modal w-full h-full grid place-items-center ${
-          isOpen ? "block" : "hidden"
+       className={`fixed top-0 right-0 left-0 w-full h-full grid place-items-center ${
+          isOpen ? "opacity-100 transition-opacity modal" : "opacity-0 -z-10 "
         }`}
       >
         {/* content */}

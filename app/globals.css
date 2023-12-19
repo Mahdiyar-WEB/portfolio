@@ -30,6 +30,7 @@ button:focus{
 }
 .modal{
   z-index: 51;
+  transition-duration: 300ms;
 }
 .modal-content{
   width: 85%;
