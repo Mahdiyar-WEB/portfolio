@@ -28,6 +28,9 @@ button:focus{
 .technologies{
   clip-path: polygon(20% 65%, 80% 65%, 100% 100%, 0 100%, 0 100%, 0 100%);
 }
+.last-child hr {
+  opacity: 0; /* or any other opacity value you prefer for the last hr */
+}
 .modal{
   z-index: 51;
   transition-duration: 300ms;
