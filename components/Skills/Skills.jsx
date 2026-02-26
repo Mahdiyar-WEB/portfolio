@@ -17,9 +17,14 @@ const skills = [
   { title: "MUI", stars: 4.5 },
   { title: "Formik", stars: 5 },
   { title: "Next-auth", stars: 4 },
-  { title: "mongo db", stars: 3 },
+  { title: "Mongo DB", stars: 5 },
+  { title: "Oracle SQL DB", stars: 3.5 },
   { title: "Redux", stars: 5 },
   { title: "Context", stars: 5 },
+  { title: "Docker", stars: 5 },
+  { title: "Figma", stars: 5 },
+  { title: "UI/UX Design", stars: 3.5 },
+  { title: "Operation", stars: 5 },
 ];
 
 const Skills = () => {
