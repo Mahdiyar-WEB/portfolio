@@ -75,7 +75,7 @@ const Experience = ({
   };
   return (
     <div className="dark:text-white h-full text-slate-600 p-6  rounded-md ring-1 shadow-sm shadow-blue-600 ring-blue-500">
-      <div className="flex flex-col gap-4 md:gap-2">
+      <div className="flex flex-col h-full gap-4 md:gap-2">
         {website ? (
           <Link
             target="_blank"
@@ -90,7 +90,7 @@ const Experience = ({
           </h4>
         )}
         <p className="text-justify break-words ">{description}</p>
-        <p className="text-xs font-semibold mt-2 ">
+        <p className="text-xs font-semibold mt-auto">
           {from} | {to}
           {to !== "Present" && (
             <span className="ms-1">({calcDate(from, to).result})</span>
