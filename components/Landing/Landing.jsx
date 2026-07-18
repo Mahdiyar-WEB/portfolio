@@ -11,7 +11,7 @@ const Landing = () => {
           quality={100}
           width={300}
           height={300}
-          className="w-[250px] h-[250px] lg:w-[300px] lg:h-[300px]"
+          className="w-[250px] h-[260px] lg:w-[300px] lg:h-[320px] object-cover object-center"
           priority={true}
         />
       </div>
