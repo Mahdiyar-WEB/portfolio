@@ -21,11 +21,21 @@ const technologiesAndLibraries = [
   { name: "Axios", href: "https://axios-http.com/docs/intro" },
   { name: "Yup", href: "https://github.com/jquense/yup" },
   { name: "React icons", href: "https://react-icons.github.io/react-icons/" },
-  { name: "React toast", href: "https://www.npmjs.com/package/react-toast-notifications" },
+  {
+    name: "React toast",
+    href: "https://www.npmjs.com/package/react-toast-notifications",
+  },
   { name: "React select", href: "https://react-select.com/home" },
   { name: "Query string", href: "https://www.npmjs.com/package/query-string" },
   { name: "Sweet alert 2", href: "https://sweetalert2.com/download" },
-
+  { name: "React hook form", href: "https://react-hook-form.com/" },
+  { name: "Tiptap", href: "https://tiptap.dev/" },
+  {
+    name: "Framer Motion",
+    href: "https://www.framer.com/dictionary/framer-motion",
+  },
+  { name: "AWS SDK", href: "https://aws.amazon.com/sdk-for-javascript/" },
+  { name: "Plaiceholder", href: "https://plaiceholder.co/docs" },
 ];
 
 export default technologiesAndLibraries;

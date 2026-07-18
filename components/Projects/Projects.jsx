@@ -16,6 +16,28 @@ import Chip from "@/common/Chip";
 const projects = [
   {
     id: 1,
+    url: "https://belagito.ir",
+    src: "/images/belagito.png",
+    alt: "belagito",
+    name: "Blog application",
+    description: "modern blog web application developed with next js",
+    github: "https://github.com/Mahdiyar-WEB/Bootstrap4-5",
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "Yup",
+      "React hook form",
+      "MongoDB",
+      "Node.js",
+      "React hook form",
+      "Tiptap",
+      "Framer Motion",
+      "AWS SDK",
+      "Plaiceholder",
+    ],
+  },
+  {
+    id: 2,
     url: "https://bootstrap4-5.vercel.app/",
     src: "/images/cars-store.jpg",
     alt: "cars store",
@@ -26,7 +48,7 @@ const projects = [
     technologies: ["Bootstrap", "HTML", "CSS", "JavaScript"],
   },
   {
-    id: 2,
+    id: 3,
     url: "https://mahdiyar-web.github.io/Dlfox.com-Design/",
     src: "/images/dlfox-design.png",
     alt: "dlfox design",
@@ -36,7 +58,7 @@ const projects = [
     technologies: ["HTML", "CSS", "JQuery"],
   },
   {
-    id: 3,
+    id: 4,
     url: "https://mahdiyar-web.github.io/Jobinja.ir-Design/",
     src: "/images/jobinja-design.png",
     alt: "jobinja design",
@@ -46,7 +68,7 @@ const projects = [
     technologies: ["HTML", "CSS", "JQuery"],
   },
   {
-    id: 4,
+    id: 5,
     url: "https://react-to-next-mu.vercel.app/",
     src: "/images/member-panel.png",
     alt: "member panel",
@@ -58,7 +80,7 @@ const projects = [
     technologies: ["Next.js", "Bootstrap", "Formik", "Yup", "Material UI"],
   },
   {
-    id: 5,
+    id: 6,
     url: "https://react-inventory-tau.vercel.app/",
     src: "/images/react-inventory.png",
     alt: "react inventory",
@@ -69,7 +91,7 @@ const projects = [
     technologies: ["Bootstrap", "Redux", "Sass", "React", "React icons"],
   },
   {
-    id: 6,
+    id: 7,
     url: "https://react-projects-mahdiyar-web.vercel.app/",
     src: "/images/react-projects.png",
     alt: "react projects",
@@ -86,7 +108,7 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     url: "https://store-eight-iota.vercel.app/",
     src: "/images/react-store.png",
     alt: "shoes store",
@@ -124,7 +146,7 @@ const Projects = () => {
 
   const displayTechnologiesHandler = (technologies) => {
     const technologiesInformations = technologies.map((technology) =>
-      technologiesAndLibraries.find((item) => item.name === technology)
+      technologiesAndLibraries.find((item) => item.name === technology),
     );
     const modalBody = technologiesInformations.map((item, index) => (
       <Chip {...item} key={index} />
@@ -252,7 +274,7 @@ const Projects = () => {
               </div>
             </div>
           );
-        }
+        },
       )}
     </section>
   );
