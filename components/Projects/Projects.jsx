@@ -21,7 +21,7 @@ const projects = [
     alt: "belagito",
     name: "Blog application",
     description: "modern blog web application developed with next js",
-    github: "https://github.com/Mahdiyar-WEB/Bootstrap4-5",
+    github: "https://github.com/Mahdiyar-WEB/blogs-app",
     technologies: [
       "Next.js",
       "Tailwind CSS",
