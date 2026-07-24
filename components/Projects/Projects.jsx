@@ -36,17 +36,17 @@ const projects = [
       "Plaiceholder",
     ],
   },
-  {
-    id: 2,
-    url: "https://bootstrap4-5.vercel.app/",
-    src: "/images/cars-store.jpg",
-    alt: "cars store",
-    name: "cars store",
-    description:
-      "practice project based  learning course for bootstrap 4 and 5",
-    github: "https://github.com/Mahdiyar-WEB/Bootstrap4-5",
-    technologies: ["Bootstrap", "HTML", "CSS", "JavaScript"],
-  },
+  // {
+  //   id: 2,
+  //   url: "https://bootstrap4-5.vercel.app/",
+  //   src: "/images/cars-store.jpg",
+  //   alt: "cars store",
+  //   name: "cars store",
+  //   description:
+  //     "practice project based  learning course for bootstrap 4 and 5",
+  //   github: "https://github.com/Mahdiyar-WEB/Bootstrap4-5",
+  //   technologies: ["Bootstrap", "HTML", "CSS", "JavaScript"],
+  // },
   {
     id: 3,
     url: "https://mahdiyar-web.github.io/Dlfox.com-Design/",
@@ -90,42 +90,42 @@ const projects = [
     github: "https://github.com/Mahdiyar-WEB/react-inventory",
     technologies: ["Bootstrap", "Redux", "Sass", "React", "React icons"],
   },
-  {
-    id: 7,
-    url: "https://react-projects-mahdiyar-web.vercel.app/",
-    src: "/images/react-projects.png",
-    alt: "react projects",
-    name: "react projects",
-    description:
-      "three project inside one project: todo app, expense tracker, contact app",
-    github: "https://github.com/Mahdiyar-WEB/react_projects",
-    technologies: [
-      "Query string",
-      "Axios",
-      "React select",
-      "React",
-      "React toast",
-    ],
-  },
-  {
-    id: 8,
-    url: "https://store-eight-iota.vercel.app/",
-    src: "/images/react-store.png",
-    alt: "shoes store",
-    name: "shoes store",
-    description: "store project for selling shoes",
-    github: "https://github.com/Mahdiyar-WEB/shoes-store",
-    technologies: [
-      "React icons",
-      "Axios",
-      "Yup",
-      "React",
-      "React toast",
-      "Query string",
-      "Formik",
-      "Sweet alert 2",
-    ],
-  },
+  // {
+  //   id: 7,
+  //   url: "https://react-projects-mahdiyar-web.vercel.app/",
+  //   src: "/images/react-projects.png",
+  //   alt: "react projects",
+  //   name: "react projects",
+  //   description:
+  //     "three project inside one project: todo app, expense tracker, contact app",
+  //   github: "https://github.com/Mahdiyar-WEB/react_projects",
+  //   technologies: [
+  //     "Query string",
+  //     "Axios",
+  //     "React select",
+  //     "React",
+  //     "React toast",
+  //   ],
+  // }
+  // {
+  //   id: 8,
+  //   url: "https://store-eight-iota.vercel.app/",
+  //   src: "/images/react-store.png",
+  //   alt: "shoes store",
+  //   name: "shoes store",
+  //   description: "store project for selling shoes",
+  //   github: "https://github.com/Mahdiyar-WEB/shoes-store",
+  //   technologies: [
+  //     "React icons",
+  //     "Axios",
+  //     "Yup",
+  //     "React",
+  //     "React toast",
+  //     "Query string",
+  //     "Formik",
+  //     "Sweet alert 2",
+  //   ],
+  // },
 ];
 
 const Projects = () => {
