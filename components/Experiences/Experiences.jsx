@@ -12,9 +12,8 @@ const experiences = [
     from: "08-12-2025",
     to: "Present",
     jobTitle: "CRM Engineer",
-    borderColor: "#FFCC00",
     description:
-      "I am responsible for front-end development and resolving CRM-related issues to ensure a stable and efficient user experience. I investigate and fix customer concerns related to system performance and subscriber issues, identifying root causes and implementing effective solutions. Additionally, I analyze requirements and contribute to the investigation and development of new system changes to improve functionality and overall system performance.",
+      "I lead front-end development efforts within the CRM domain while also driving the investigation and resolution of complex production issues affecting subscriber experience and system reliability. My work involves analyzing business and technical requirements, identifying root causes across the application flow, and delivering stable, maintainable solutions that improve performance, usability, and operational efficiency. I also contribute to system enhancements and new change requests in close collaboration with cross-functional teams.",
   },
   {
     id: 2,
@@ -27,7 +26,7 @@ const experiences = [
     to: "08-12-2025",
     jobTitle: "Technical operations engineer",
     description:
-      "I handle customer support and technical troubleshooting, primarily working with SQL databases and Linux systems. My responsibilities include performing database modifications, resolving system-level issues, and maintaining stable, reliable daily operations.",
+      "I was responsible for supporting critical operational systems, with a strong focus on troubleshooting, incident resolution, and day-to-day service stability. Working extensively with SQL databases and Linux environments, I handled database changes, investigated system-level issues, and ensured reliable execution of operational processes. This role strengthened my ability to work under pressure, diagnose issues quickly, and maintain consistency across business-critical services.",
   },
   {
     id: 3,
@@ -40,7 +39,7 @@ const experiences = [
     to: "12-18-2024",
     jobTitle: "Technical support",
     description:
-      "I'm responsible for customer support and troubleshooting using SQL and Linux. My tasks include database changes, fixing system issues, and ensuring smooth operations. I also investigate complex technical problems, analyze logs and system performance, and collaborate with the development team to prevent recurring issues and improve overall system stability.",
+      "I supported production systems by handling technical issues, investigating service behavior, and resolving operational problems across SQL and Linux-based environments. My responsibilities included database updates, log analysis, issue triage, and close coordination with development teams to address root causes rather than temporary fixes. Through this role, I helped improve system stability, reduce recurring incidents, and maintain smooth daily operations.",
   },
   {
     id: 4,
@@ -50,11 +49,10 @@ const experiences = [
     imageW: "350px",
     from: "02-20-2024",
     borderColor: "#00FFD1",
-
     to: "08-28-2024",
     jobTitle: "Lead Front-End Developer",
     description:
-      "I started working at this company as a mid-level front-end developer, and now I have been promoted to Lead Front-End Developer. Our focus is on designing and delivering high-level new features for the project. In addition to leading the front-end team, I also contribute as a Node.js developer, developing and maintaining back-end APIs for the project.",
+      "I was promoted to Lead Front-End Developer to take greater ownership of the product's front-end direction, feature delivery, and development quality. In this role, I led the implementation of new user-facing features, coordinated front-end decisions, and helped align technical execution with product goals. Alongside front-end leadership, I also contributed on the back end with Node.js, building and maintaining APIs required to support product functionality end to end.",
   },
   {
     id: 5,
@@ -64,11 +62,10 @@ const experiences = [
     imageW: "350px",
     from: "11-30-2022",
     borderColor: "#00FFD1",
-
     to: "02-20-2024",
     jobTitle: "Front-end developer",
     description:
-      "I started working as a mid-level front-end developer in this company, and our focus is on developing high-level new features for the project, i also working as node js developer to developing some back-end API's for project.",
+      "I worked on developing and improving core product features as part of the front-end team, with a focus on building reliable, scalable, and user-friendly interfaces. Beyond front-end implementation, I also contributed to back-end development using Node.js, where I helped create and maintain APIs needed by the product. This role expanded my full-stack experience and strengthened my ability to deliver features across multiple layers of the application.",
   },
   {
     id: 6,
@@ -80,9 +77,10 @@ const experiences = [
     to: "09-23-2022",
     jobTitle: "junior | mid-level front-end developer",
     description:
-      "during my time working as a freelance front-end developer, I primarily focused on learning new technologies and completing practice projects. Additionally, I worked on customer projects to enhance my skills and gain practical experience.",
+      "As a freelance front-end developer, I worked on a mix of client projects and self-driven builds that helped me strengthen both my technical foundation and practical delivery skills. During this period, I deepened my knowledge of modern front-end technologies, translated requirements into functional interfaces, and learned how to manage projects with greater independence, adaptability, and attention to real-world business needs.",
   },
 ];
+
 
 const Experiences = () => {
   return (
