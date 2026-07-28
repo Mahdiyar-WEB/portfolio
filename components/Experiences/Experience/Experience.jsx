@@ -77,7 +77,7 @@ const Experience = ({
                 {title}
               </h3>
             )}
-            <h4 className="text-sm sm:text-base text-slate-600 dark:text-gray-400 mt-2">
+            <h4 className="text-sm font-semibold sm:text-base text-slate-600 dark:text-gray-400 ">
               {jobTitle}
             </h4>
           </div>
