@@ -40,8 +40,8 @@ const Header = () => {
     window.matchMedia("(prefers-color-scheme: dark)").matches
       ? document.documentElement.classList.add("dark")
       : title === "dark"
-      ? document.documentElement.classList.add("dark")
-      : document.documentElement.classList.remove("dark");
+        ? document.documentElement.classList.add("dark")
+        : document.documentElement.classList.remove("dark");
     localStorage.setItem("theme", title);
     setIsOpen(false);
     setActiveTheme(themes.find((theme) => theme.title === title));
@@ -54,27 +54,26 @@ const Header = () => {
   };
 
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isOpen &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target) &&
+        dropdownRef2.current &&
+        !dropdownRef2.current.contains(event.target) &&
+        buttonRef2.current &&
+        !buttonRef2.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
-
-  const handleClickOutside = (event) => {
-    if (
-      isOpen &&
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.target) &&
-      buttonRef.current &&
-      !buttonRef.current.contains(event.target) &&
-      dropdownRef2.current &&
-      !dropdownRef2.current.contains(event.target) &&
-      buttonRef2.current &&
-      !buttonRef2.current.contains(event.target)
-    ) {
-      setIsOpen(false);
-    }
-  };
 
   return (
     <header className="sm:px-6 px-2">
