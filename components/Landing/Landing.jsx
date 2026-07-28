@@ -8,7 +8,7 @@ const Landing = () => {
         <Image
           src="/images/profile.png"
           alt="mahdiyar"
-          quality={100}
+          unoptimized
           width={300}
           height={300}
           className="w-[250px] h-[260px] lg:w-[300px] lg:h-[320px] object-cover object-center"
