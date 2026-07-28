@@ -225,6 +225,7 @@ const coreSkills = [
     iconSrc: "/tiptap.svg",
     iconOpacityLight: 0.24,
     iconOpacityDark: 0.16,
+    iconInvertDark: true,
   },
   {
     title: "JavaScript",
