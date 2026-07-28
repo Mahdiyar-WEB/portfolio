@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 const SkillCard = ({
@@ -69,10 +70,12 @@ const SkillCard = ({
 
       {iconUrl && (
         <div className="pointer-events-none absolute right-4 top-4 transition-transform duration-300 group-hover:scale-[1.05] md:right-5 md:top-5">
-          <img
+          <Image
             src={iconUrl}
             alt={title}
-            loading="lazy"
+            width={20}
+            height={20}
+            unoptimized
             className={[
               " select-none object-contain",
               featured
