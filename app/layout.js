@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <a
           href="/resume.png"
           download="resume.png"
-          className="group fixed bottom-6 right-6 z-50 flex items-center justify-center gap-0 overflow-hidden rounded-full border border-blue-200 bg-white p-4 text-blue-600 shadow-2xl transition-all duration-500 hover:gap-2 hover:px-6 dark:border-blue-900/50 dark:bg-neutral-900 dark:text-blue-400 md:gap-2 md:px-6 md:py-4"
+          className="group fixed bottom-6 right-6 z-10 flex items-center justify-center gap-0 overflow-hidden rounded-full border border-blue-200 bg-white p-4 text-blue-600 shadow-2xl transition-all duration-500 hover:gap-2 hover:px-6 dark:border-blue-900/50 dark:bg-neutral-900 dark:text-blue-400 md:gap-2 md:px-6 md:py-4"
           aria-label="Download Resume"
         >
           <span className="absolute inset-0 -z-10 h-full w-full  rounded-full bg-blue-400/30 dark:bg-blue-500/20" />
