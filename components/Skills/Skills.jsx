@@ -3,7 +3,7 @@
 import React from "react";
 import SkillCard from "./Skill/SkillCard";
 
-const skills = [
+const coreSkills = [
   {
     title: "Next.js",
     slug: "nextdotjs",
@@ -52,18 +52,18 @@ const skills = [
   },
 
   {
-    title: "JavaScript",
-    slug: "javascript",
-    color: "F7DF1E",
-    category: "Language",
-    summary: "Dynamic logic for modern interfaces.",
-    accent: "#EAB308",
-    lightTint: "rgba(234,179,8,0.16)",
-    darkTint: "rgba(250,204,21,0.10)",
-    lightBorder: "rgba(234,179,8,0.34)",
-    darkBorder: "rgba(250,204,21,0.22)",
-    iconOpacityLight: 0.3,
-    iconOpacityDark: 0.18,
+    title: "Tailwind CSS",
+    slug: "tailwindcss",
+    color: "06B6D4",
+    category: "UI",
+    summary: "Fast utility-first interface styling.",
+    accent: "#0891B2",
+    lightTint: "rgba(8,145,178,0.14)",
+    darkTint: "rgba(34,211,238,0.10)",
+    lightBorder: "rgba(8,145,178,0.34)",
+    darkBorder: "rgba(34,211,238,0.22)",
+    iconOpacityLight: 0.26,
+    iconOpacityDark: 0.16,
   },
   {
     title: "Node.js",
@@ -76,20 +76,6 @@ const skills = [
     darkTint: "rgba(74,222,128,0.10)",
     lightBorder: "rgba(22,163,74,0.34)",
     darkBorder: "rgba(74,222,128,0.22)",
-    iconOpacityLight: 0.26,
-    iconOpacityDark: 0.16,
-  },
-  {
-    title: "Tailwind CSS",
-    slug: "tailwindcss",
-    color: "06B6D4",
-    category: "UI",
-    summary: "Fast utility-first interface styling.",
-    accent: "#0891B2",
-    lightTint: "rgba(8,145,178,0.14)",
-    darkTint: "rgba(34,211,238,0.10)",
-    lightBorder: "rgba(8,145,178,0.34)",
-    darkBorder: "rgba(34,211,238,0.22)",
     iconOpacityLight: 0.26,
     iconOpacityDark: 0.16,
   },
@@ -108,6 +94,20 @@ const skills = [
     iconOpacityDark: 0.15,
   },
   {
+    title: "Framer Motion",
+    slug: "framer",
+    color: "0055FF",
+    category: "Animation",
+    summary: "Smooth UI motion and interactive transitions.",
+    accent: "#2563EB",
+    lightTint: "rgba(37,99,235,0.12)",
+    darkTint: "rgba(96,165,250,0.10)",
+    lightBorder: "rgba(37,99,235,0.30)",
+    darkBorder: "rgba(96,165,250,0.22)",
+    iconOpacityLight: 0.26,
+    iconOpacityDark: 0.16,
+  },
+  {
     title: "React Hook Form",
     slug: "reacthookform",
     color: "EC5990",
@@ -122,19 +122,21 @@ const skills = [
     iconOpacityDark: 0.15,
   },
   {
-    title: "Redux",
-    slug: "redux",
-    color: "764ABC",
-    category: "State",
-    summary: "Predictable global state management.",
-    accent: "#7C3AED",
-    lightTint: "rgba(124,58,237,0.13)",
-    darkTint: "rgba(139,92,246,0.10)",
-    lightBorder: "rgba(124,58,237,0.34)",
-    darkBorder: "rgba(167,139,250,0.22)",
+    title: "Yup",
+    slug: "yup",
+    color: "475569",
+    category: "Validation",
+    summary: "Schema validation for forms and APIs.",
+    accent: "#475569",
+    lightTint: "rgba(71,85,105,0.11)",
+    darkTint: "rgba(148,163,184,0.08)",
+    lightBorder: "rgba(71,85,105,0.30)",
+    darkBorder: "rgba(148,163,184,0.22)",
+    iconSrc: "/yup.svg",
     iconOpacityLight: 0.24,
     iconOpacityDark: 0.15,
   },
+
   {
     title: "NextAuth",
     slug: "nextauth",
@@ -150,6 +152,22 @@ const skills = [
     iconOpacityDark: 0.16,
     iconSrc: "/next_auth.png",
   },
+  {
+    title: "AWS S3",
+    slug: "amazons3",
+    color: "FF9900",
+    category: "Storage",
+    summary: "Reliable object storage for assets and uploads.",
+    accent: "#F79400",
+    lightTint: "rgba(247,148,0,0.12)",
+    darkTint: "rgba(255,153,0,0.10)",
+    lightBorder: "rgba(247,148,0,0.30)",
+    darkBorder: "rgba(255,153,0,0.22)",
+    iconSrc: "/aws-s3.svg",
+    iconOpacityLight: 0.24,
+    iconOpacityDark: 0.15,
+  },
+
   {
     title: "Docker",
     slug: "docker",
@@ -175,6 +193,64 @@ const skills = [
     darkTint: "rgba(74,222,128,0.10)",
     lightBorder: "rgba(34,197,94,0.34)",
     darkBorder: "rgba(74,222,128,0.22)",
+    iconOpacityLight: 0.24,
+    iconOpacityDark: 0.15,
+  },
+  {
+    title: "Sharp",
+    slug: "Sharp",
+    color: "14B8A6",
+    category: "Image",
+    summary: "Blur placeholder generation for images.",
+    accent: "#0F766E",
+    lightTint: "rgba(15,118,110,0.12)",
+    darkTint: "rgba(45,212,191,0.10)",
+    lightBorder: "rgba(15,118,110,0.30)",
+    darkBorder: "rgba(45,212,191,0.22)",
+    iconSrc: "/sharp-logo.svg",
+    iconOpacityLight: 0.24,
+    iconOpacityDark: 0.15,
+  },
+  {
+    title: "Tiptap",
+    slug: "tiptap",
+    color: "1E293B",
+    category: "Editor",
+    summary: "Extensible rich-text editing with custom nodes.",
+    accent: "#1E293B",
+    lightTint: "rgba(30,41,59,0.11)",
+    darkTint: "rgba(148,163,184,0.08)",
+    lightBorder: "rgba(30,41,59,0.30)",
+    darkBorder: "rgba(148,163,184,0.22)",
+    iconSrc: "/tiptap.svg",
+    iconOpacityLight: 0.24,
+    iconOpacityDark: 0.16,
+  },
+  {
+    title: "JavaScript",
+    slug: "javascript",
+    color: "F7DF1E",
+    category: "Language",
+    summary: "Dynamic logic for modern interfaces.",
+    accent: "#EAB308",
+    lightTint: "rgba(234,179,8,0.16)",
+    darkTint: "rgba(250,204,21,0.10)",
+    lightBorder: "rgba(234,179,8,0.34)",
+    darkBorder: "rgba(250,204,21,0.22)",
+    iconOpacityLight: 0.3,
+    iconOpacityDark: 0.18,
+  },
+  {
+    title: "Redux",
+    slug: "redux",
+    color: "764ABC",
+    category: "State",
+    summary: "Predictable global state management.",
+    accent: "#7C3AED",
+    lightTint: "rgba(124,58,237,0.13)",
+    darkTint: "rgba(139,92,246,0.10)",
+    lightBorder: "rgba(124,58,237,0.34)",
+    darkBorder: "rgba(167,139,250,0.22)",
     iconOpacityLight: 0.24,
     iconOpacityDark: 0.15,
   },
@@ -219,20 +295,6 @@ const skills = [
     darkBorder: "rgba(196,181,253,0.22)",
     iconOpacityLight: 0.24,
     iconOpacityDark: 0.15,
-  },
-  {
-    title: "Linux",
-    slug: "linux",
-    color: "FCC624",
-    category: "System",
-    summary: "CLI workflow and stable environments.",
-    accent: "#CA8A04",
-    lightTint: "rgba(202,138,4,0.14)",
-    darkTint: "rgba(234,179,8,0.10)",
-    lightBorder: "rgba(202,138,4,0.34)",
-    darkBorder: "rgba(250,204,21,0.22)",
-    iconOpacityLight: 0.26,
-    iconOpacityDark: 0.16,
   },
   {
     title: "Webpack",
@@ -335,18 +397,83 @@ const skills = [
   },
 ];
 
+const aiSkills = [
+  {
+    title: "ChatGPT",
+    slug: "ai",
+    color: "10A37F",
+    category: "AI Assistant",
+    summary: "Advanced prompt engineering and workflow automation.",
+    accent: "#10A37F",
+    lightTint: "rgba(16,163,127,0.12)",
+    darkTint: "rgba(16,163,127,0.10)",
+    lightBorder: "rgba(16,163,127,0.30)",
+    darkBorder: "rgba(16,163,127,0.22)",
+    iconOpacityLight: 0.26,
+    iconSrc: "/chatgpt.svg",
+    iconOpacityDark: 0.16,
+    iconInvertDark: true,
+  },
+  {
+    title: "Claude",
+    slug: "claude",
+    color: "D97757",
+    category: "AI Assistant",
+    summary: "Context-rich code generation and complex problem solving.",
+    accent: "#D97757",
+    lightTint: "rgba(217,119,87,0.12)",
+    darkTint: "rgba(217,119,87,0.10)",
+    lightBorder: "rgba(217,119,87,0.30)",
+    darkBorder: "rgba(217,119,87,0.22)",
+    iconOpacityLight: 0.26,
+    iconOpacityDark: 0.16,
+  },
+  {
+    title: "OpenAI Codex",
+    slug: "openai",
+    color: "4F46E5",
+    category: "AI Automation",
+    summary: "AI-driven pair programming and boilerplate speedup.",
+    accent: "#4F46E5",
+    lightTint: "rgba(79,70,229,0.12)",
+    darkTint: "rgba(99,102,241,0.10)",
+    lightBorder: "rgba(79,70,229,0.30)",
+    darkBorder: "rgba(99,102,241,0.22)",
+    iconOpacityLight: 0.26,
+    iconSrc: "/codex.svg",
+    iconOpacityDark: 0.16,
+  },
+];
+
 const Skills = () => {
   return (
-    <section id="skills" className="relative py-16 md:py-20">
+    <section id="skills" className="relative py-16 ">
       <div className="mb-10 text-center">
         <h2 className="dark:text-white text-slate-600 font-bold text-3xl font-sans text-center drop-shadow-2xl mb-16 sm:mb-8">
           My Skills
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-12">
-        {skills.map((skill, index) => (
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-12 mb-20">
+        {coreSkills.map((skill, index) => (
           <SkillCard key={`${skill.title}-${index}`} {...skill} index={index} />
+        ))}
+      </div>
+
+      <div className="mb-10 text-center">
+        <h2 className="dark:text-white text-slate-600 font-bold text-3xl font-sans text-center drop-shadow-2xl mb-16 sm:mb-8">
+          AI & Copilot Skills
+        </h2>
+      </div>
+
+      <div className="flex flex-col gap-6 md:grid md:grid-cols-2 xl:flex xl:flex-row xl:justify-center xl:flex-wrap">
+        {aiSkills.map((skill, index) => (
+          <div
+            key={`${skill.title}-${index}`}
+            className="w-full xl:w-[calc(30%-18px)]"
+          >
+            <SkillCard {...skill} index={index} />
+          </div>
         ))}
       </div>
     </section>

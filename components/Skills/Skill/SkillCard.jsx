@@ -120,7 +120,7 @@ const SkillCard = ({
           {title}
         </h3>
 
-        <p className="mt-3 max-w-[92%] text-sm leading-6 text-slate-700 dark:text-slate-300">
+        <p className="mt-3 max-w-[78%] text-sm leading-6 text-slate-700 dark:text-slate-300">
           {summary || "Reliable production-ready expertise."}
         </p>
       </div>
