@@ -36,7 +36,7 @@ const experiences = [
     logo: "/tecnotree.png",
     imageW: "350px",
     from: "08-28-2024",
-    borderColor: "#33F1EB",
+    borderColor: "#00FFD1",
     to: "12-18-2024",
     jobTitle: "Technical support",
     description:
@@ -49,7 +49,7 @@ const experiences = [
     logo: "/tecnotree.png",
     imageW: "350px",
     from: "02-20-2024",
-    borderColor: "#2CFCE8",
+    borderColor: "#00FFD1",
 
     to: "08-28-2024",
     jobTitle: "Lead Front-End Developer",
@@ -63,7 +63,7 @@ const experiences = [
     logo: "/tecnotree.png",
     imageW: "350px",
     from: "11-30-2022",
-    borderColor: "#2CFCE8",
+    borderColor: "#00FFD1",
 
     to: "02-20-2024",
     jobTitle: "Front-end developer",
