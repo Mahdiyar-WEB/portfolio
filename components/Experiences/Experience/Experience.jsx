@@ -1,101 +1,111 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 const Experience = ({
   title,
   website,
-  image,
   from,
   to,
-  id,
   jobTitle,
   description,
-  imageW,
+  borderColor,
+  logo,
 }) => {
   const calcDate = (date1, date2) => {
-    /*
-     * calcDate() : Calculates the difference between two dates
-     * @date1 : "First Date in the format MM-DD-YYYY"
-     * @date2 : "Second Date in the format MM-DD-YYYY"
-     * return : Array
-     */
-    //new date instance
-    const dt_date1 = new Date(date1);
-    const dt_date2 = new Date(date2);
-
-    //Get the Timestamp
-    const date1_time_stamp = dt_date1.getTime();
-    const date2_time_stamp = dt_date2.getTime();
-
-    let calc;
-
-    //Check which timestamp is greater
-    if (date1_time_stamp > date2_time_stamp) {
-      calc = new Date(date1_time_stamp - date2_time_stamp);
-    } else {
-      calc = new Date(date2_time_stamp - date1_time_stamp);
-    }
-    //Retrieve the date, month and year
-    const calcFormatTmp =
-      calc.getDate() + "-" + (calc.getMonth() + 1) + "-" + calc.getFullYear();
-    //Convert to an array and store
-    const calcFormat = calcFormatTmp.split("-");
-    //Subtract each member of our array from the default date
-    const days_passed = Number(Math.abs(calcFormat[0]) - 1);
-    const months_passed = Number(Math.abs(calcFormat[1]) - 1);
-    const years_passed = Number(Math.abs(calcFormat[2]) - 1970);
-
-    //Set up custom text
-    const yrsTxt = ["year", "years"];
-    const mnthsTxt = ["month", "months"];
-
-    //Convert to days and sum together
-    const total_days =
-      years_passed * 365 + months_passed * 30.417 + days_passed;
-
-    //display result with custom text
-    const result =
-      (years_passed == 1
-        ? years_passed + " " + yrsTxt[0] + " "
-        : years_passed > 1
-        ? years_passed + " " + yrsTxt[1] + " "
-        : "") +
-      (months_passed == 1
-        ? months_passed + " " + mnthsTxt[0]
-        : months_passed > 1
-        ? months_passed + " " + mnthsTxt[1] + " "
-        : "");
-
-    //return the result
-    return {
-      total_days: Math.round(total_days),
-      result: result.trim(),
-    };
+    const d1 = new Date(date1).getTime();
+    const d2 = new Date(date2).getTime();
+    const calc = new Date(Math.abs(d2 - d1));
+    const y = Math.abs(calc.getFullYear() - 1970);
+    const m = calc.getMonth();
+    return (
+      [
+        y > 0 ? `${y} yr${y > 1 ? "s" : ""}` : "",
+        m > 0 ? `${m} mo${m > 1 ? "s" : ""}` : "",
+      ]
+        .filter(Boolean)
+        .join(" ") || "0 mo"
+    );
   };
+
+  const duration = to !== "Present" ? calcDate(from, to) : null;
+
   return (
-    <div className="dark:text-white h-full text-slate-600 p-6  rounded-md ring-1 shadow-sm shadow-blue-600 ring-blue-500">
-      <div className="flex flex-col h-full gap-4 md:gap-2">
-        {website ? (
-          <Link
-            target="_blank"
-            className="text-lg md:text-xl font-semibold break-words"
-            href={website}
-          >
-            {title} - {jobTitle}
-          </Link>
-        ) : (
-          <h4 className=" text-lg md:text-xl font-semibold">
-            {title} - {jobTitle}
-          </h4>
+    <div className="col-span-12 md:col-span-6">
+      <div
+        className="group relative flex h-full flex-col overflow-hidden rounded-2xl border p-5 sm:p-6
+          bg-white dark:bg-slate-900/60
+          border-gray-300 dark:border-white/10
+          shadow-lg dark:shadow-[0_2px_30px_-4px_rgba(0,0,0,0.4)]"
+      >
+        {/* Glow — constrained to right 40% so it doesn't bleed over text */}
+        <motion.div className="pointer-events-none absolute inset-y-0 right-0 w-2/5">
+          <div
+            className="absolute -top-10 -right-10 w-32 h-32 md:h-40 md:w-40 rounded-full blur-3xl"
+            style={{ backgroundColor: borderColor }}
+          />
+        </motion.div>
+
+        {/* Company logo watermark — right side only, no text overlap */}
+        {logo && (
+          <div className="pointer-events-none absolute top-2 right-4 w-16 h-16 md:w-24 md:h-20">
+            <Image
+              src={logo}
+              alt={title}
+              fill
+              className="object-contain object-center select-none grayscale "
+            />
+          </div>
         )}
-        <p className="text-justify break-words ">{description}</p>
-        <p className="text-xs font-semibold mt-auto">
-          {from} | {to}
-          {to !== "Present" && (
-            <span className="ms-1">({calcDate(from, to).result})</span>
-          )}
-        </p>
+
+        {/* Content */}
+        <div className="relative z-10 flex h-full flex-col">
+          <div className="mb-4 flex flex-col gap-0.5">
+            {website ? (
+              <Link
+                href={website}
+                target="_blank"
+                className="w-fit text-xl sm:text-2xl font-bold text-slate-900 dark:text-white hover:underline"
+              >
+                {title}
+              </Link>
+            ) : (
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                {title}
+              </h3>
+            )}
+            <h4 className="text-sm sm:text-base text-slate-600 dark:text-gray-400 mt-2">
+              {jobTitle}
+            </h4>
+          </div>
+
+          <p className="flex-grow text-sm leading-relaxed md:w-4/5 text-slate-600 dark:text-gray-300">
+            {description}
+          </p>
+
+          <div className="mt-5 flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500 dark:text-gray-400">
+            <span>{from}</span>
+            <span className="opacity-50">—</span>
+            <span>{to}</span>
+            {duration && (
+              <>
+                <span className="opacity-50">|</span>
+                <span>{duration}</span>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Bottom gradient bar */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-[3px] rounded-b-2xl"
+          style={{
+            background: `linear-gradient(90deg, ${borderColor}, transparent)`,
+          }}
+        />
       </div>
     </div>
   );
