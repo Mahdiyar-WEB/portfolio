@@ -149,7 +149,6 @@ const skills = [
     iconOpacityLight: 0.24,
     iconOpacityDark: 0.16,
     iconSrc:'/next_auth.png',
-    iconInvertDark: true,
   },
   {
     title: "Docker",

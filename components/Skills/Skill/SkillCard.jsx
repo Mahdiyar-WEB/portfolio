@@ -23,6 +23,8 @@ const SkillCard = ({
   const iconUrl =
     iconSrc || (slug ? `https://cdn.simpleicons.org/${slug}/${color}` : "");
 
+  const isDarkAccent = accent === "#111827" || color === "000000";
+
   return (
     <div
       className={[
@@ -34,15 +36,16 @@ const SkillCard = ({
         "hover:border-[color:color-mix(in_srgb,var(--accent)_72%,white)]",
         "hover:shadow-[0_18px_40px_rgba(15,23,42,0.12),0_0_0_1px_color-mix(in_srgb,var(--accent)_28%,white),0_0_28px_color-mix(in_srgb,var(--accent)_10%,transparent),inset_0_1px_0_rgba(255,255,255,0.84),inset_0_0_0_1px_color-mix(in_srgb,var(--accent)_18%,transparent)]",
         "dark:border-[color:var(--dark-border)]",
-        "dark:shadow-[0_16px_42px_rgba(0,0,0,0.34),0_0_0_1px_color-mix(in_srgb,var(--accent)_22%,transparent),inset_0_1px_0_rgba(255,255,255,0.04),inset_0_0_0_1px_color-mix(in_srgb,var(--accent)_12%,transparent)]",
-        "dark:hover:border-[color:color-mix(in_srgb,var(--accent)_78%,white_10%)]",
-        "dark:hover:shadow-[0_22px_52px_rgba(0,0,0,0.42),0_0_0_1px_color-mix(in_srgb,var(--accent)_30%,transparent),0_0_34px_color-mix(in_srgb,var(--accent)_18%,transparent),inset_0_1px_0_rgba(255,255,255,0.05),inset_0_0_0_1px_color-mix(in_srgb,var(--accent)_16%,transparent)]",
+        isDarkAccent
+          ? "dark:shadow-[0_16px_42px_rgba(0,0,0,0.34),0_0_0_1px_color-mix(in_srgb,var(--accent-fallback)_22%,transparent),inset_0_1px_0_rgba(255,255,255,0.04),inset_0_0_0_1px_color-mix(in_srgb,var(--accent-fallback)_12%,transparent)] dark:hover:shadow-[0_22px_52px_rgba(0,0,0,0.42),0_0_0_1px_color-mix(in_srgb,var(--accent-fallback)_30%,transparent),0_0_34px_color-mix(in_srgb,var(--accent-fallback)_18%,transparent),inset_0_1px_0_rgba(255,255,255,0.05),inset_0_0_0_1px_color-mix(in_srgb,var(--accent-fallback)_16%,transparent)]"
+          : "dark:shadow-[0_16px_42px_rgba(0,0,0,0.34),0_0_0_1px_color-mix(in_srgb,var(--accent)_22%,transparent),inset_0_1px_0_rgba(255,255,255,0.04),inset_0_0_0_1px_color-mix(in_srgb,var(--accent)_12%,transparent)] dark:hover:shadow-[0_22px_52px_rgba(0,0,0,0.42),0_0_0_1px_color-mix(in_srgb,var(--accent)_30%,transparent),0_0_34px_color-mix(in_srgb,var(--accent)_18%,transparent),inset_0_1px_0_rgba(255,255,255,0.05),inset_0_0_0_1px_color-mix(in_srgb,var(--accent)_16%,transparent)]",
         featured
           ? "xl:col-span-6 xl:row-span-2 xl:min-h-[19rem]"
           : "xl:col-span-3",
       ].join(" ")}
       style={{
         "--accent": accent,
+        "--accent-fallback": "#e2e8f0", // رنگ جایگزین برای اکست‌های کاملاً تیره در تم دارک
         "--light-tint": lightTint,
         "--dark-tint": darkTint,
         "--light-border": lightBorder,
@@ -58,8 +61,9 @@ const SkillCard = ({
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-[1px] opacity-100"
         style={{
-          background:
-            "linear-gradient(90deg, transparent 0%, var(--accent) 20%, transparent 65%)",
+          background: isDarkAccent
+            ? "linear-gradient(90deg, transparent 0%, var(--accent-fallback) 20%, transparent 65%)"
+            : "linear-gradient(90deg, transparent 0%, var(--accent) 20%, transparent 65%)",
         }}
       />
 
@@ -77,7 +81,8 @@ const SkillCard = ({
             height={20}
             unoptimized
             className={[
-              " select-none object-contain",
+              "skill-icon select-none object-contain",
+              iconInvertDark ? "dark:invert" : "", // معکوس کردن رنگ لوگوهای تیره مثل Next.js در دارک مود
               featured
                 ? "h-[5.6rem] w-[5.6rem] md:h-[7.2rem] md:w-[7.2rem]"
                 : "h-[5.6rem] w-[5.6rem]",
@@ -89,9 +94,10 @@ const SkillCard = ({
       <div className="relative z-10 flex h-full flex-col justify-end p-5 md:p-6">
         <div className="mb-3 flex items-center gap-2">
           <span
-            className="h-2.5 w-2.5 rounded-full shadow-[0_0_0_4px_rgba(255,255,255,0.55)] dark:shadow-none"
+            className={`h-2.5 w-2.5 rounded-full shadow-[0_0_0_4px_rgba(255,255,255,0.55)] dark:shadow-none ${isDarkAccent&& "dark:invert"}`}
             style={{ backgroundColor: accent }}
           />
+
           <span className="text-[10px] font-bold uppercase tracking-[0.30em] text-slate-600 dark:text-slate-400">
             {category}
           </span>
@@ -109,7 +115,9 @@ const SkillCard = ({
       <div
         aria-hidden="true"
         className="absolute bottom-0 left-5 h-[3px] w-16 rounded-full transition-all duration-300 group-hover:w-24"
-        style={{ backgroundColor: accent }}
+        style={{
+          backgroundColor: isDarkAccent ? "var(--accent-fallback)" : accent,
+        }}
       />
 
       <style jsx>{`
@@ -160,16 +168,14 @@ const SkillCard = ({
           opacity: var(--icon-dark);
           filter: saturate(1.04) drop-shadow(0 14px 26px rgba(0, 0, 0, 0.34))
             drop-shadow(
-              0 0 22px color-mix(in srgb, var(--accent) 42%, transparent)
+              0 0 22px
+                color-mix(
+                  in srgb,
+                  ${isDarkAccent ? "var(--accent-fallback)" : "var(--accent)"}
+                    42%,
+                  transparent
+                )
             );
-        }
-
-        :global(.dark) .skill-card {
-          background: rgba(2, 8, 23, 0.72);
-          box-shadow:
-            0 12px 38px rgba(0, 0, 0, 0.28),
-            0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent),
-            inset 0 1px 0 rgba(255, 255, 255, 0.03);
         }
 
         .skill-card:hover {
@@ -177,7 +183,11 @@ const SkillCard = ({
         }
 
         :global(.dark) .skill-card:hover {
-          border-color: color-mix(in srgb, var(--accent) 62%, white 12%);
+          border-color: color-mix(
+            in srgb,
+            ${isDarkAccent ? "var(--accent-fallback)" : "var(--accent)"} 62%,
+            white 12%
+          );
         }
       `}</style>
     </div>
