@@ -4,7 +4,7 @@ import Image from "next/image";
 const Landing = () => {
   return (
     <section className="mt-10 md:flex md:flex-row-reverse md:items-center md:justify-evenly">
-      <div className="grid place-items-center  mx-auto sm:mx-0">
+      <div className="grid place-items-center mx-auto sm:mx-0 pointer-events-none">
         <Image
           src="/images/profile.png"
           alt="mahdiyar"

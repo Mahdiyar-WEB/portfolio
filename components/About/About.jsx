@@ -54,7 +54,7 @@ const About = () => {
             id={alt}
             src={src}
             alt={alt}
-            className={`hidden lg:block ${className}`}
+            className={`hidden lg:block pointer-events-none ${className}`}
             quality={100}
             width={60}
             height={60}
