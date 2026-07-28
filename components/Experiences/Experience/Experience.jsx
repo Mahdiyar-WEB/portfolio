@@ -82,7 +82,7 @@ const Experience = ({
             </h4>
           </div>
 
-          <p className="flex-grow text-sm leading-relaxed md:w-4/5 text-slate-900 dark:text-gray-100">
+          <p className="flex-grow mt-2 md:mt-0 leading-relaxed md:w-4/5 text-slate-900 dark:text-gray-200">
             {description}
           </p>
 
