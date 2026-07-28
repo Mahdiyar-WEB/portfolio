@@ -43,7 +43,7 @@ const imageConfigs = [
 
 const About = () => {
   const yearsOfExperience =
-    new Date().getFullYear() - new Date("2020-03-18").getFullYear();
+    new Date().getFullYear() - new Date("2021-03-18").getFullYear();
 
   return (
     <section className="relative">
@@ -63,11 +63,11 @@ const About = () => {
         );
       })}
       <p className="sm:w-96 md:w-5/6 lg:w-3/5 leading-8 mx-auto dark:text-white text-slate-800 text-justify px-6 text-lg border rounded-md py-4 shadow-sm dark:shadow-md shadow-yellow-600 dark:shadow-yellow-800 border-yellow-600">
-        My deep love for technology has always pushed me forward in my journey
-        as a front-end web developer, constantly inspiring my thirst for
-        learning and growth. With more than {yearsOfExperience} years of
-        hands-on experience in this ever-changing field, I&apos;m continually
-        adapting to stay at the forefront of web development trends.
+        Specializing in building performant, scalable, and intuitive user
+        interfaces, I bridge the gap between design and engineering. With more
+        than {yearsOfExperience}
+        years of hands-on experience, I focus on delivering clean, maintainable
+        code and seamless digital experiences across modern web ecosystems.
       </p>
     </section>
   );
