@@ -340,12 +340,12 @@ const Skills = () => {
   return (
     <section id="skills" className="relative py-16 md:py-20">
       <div className="mb-10 text-center">
-        <h2 className="text-3xl font-black text-slate-950 dark:text-white sm:text-4xl">
+        <h2 className="dark:text-white text-slate-600 font-bold text-3xl font-sans text-center drop-shadow-2xl mb-16 sm:mb-8">
           My Skills
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-12">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-12">
         {skills.map((skill, index) => (
           <SkillCard key={`${skill.title}-${index}`} {...skill} index={index} />
         ))}
