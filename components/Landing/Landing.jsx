@@ -20,7 +20,7 @@ const Landing = () => {
           Hi, I&apos;m Mahdiyar Marvi{" "}
         </h1>
         <h2 className="text-2xl mt-2 text-center text-blue-500 font-sans">
-          Front-end Developer
+          Front-end Engineer
         </h2>
       </div>
     </section>
