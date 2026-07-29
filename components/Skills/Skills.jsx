@@ -302,7 +302,7 @@ const coreSkills = [
     slug: "shadcnui",
     color: "000000",
     category: "UI Library",
-    summary: "Beaut ifully designed components built with Radix and Tailwind.",
+    summary: "Reusable UI components with total control over styles and logic",
     accent: "#000000",
     lightTint: "rgba(0,0,0,0.08)",
     darkTint: "rgba(255,255,255,0.06)",
