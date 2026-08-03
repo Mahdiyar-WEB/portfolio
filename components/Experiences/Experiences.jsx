@@ -10,7 +10,7 @@ const experiences = [
     logo: "/irancell.svg",
     imageW: "350px",
     from: "08-12-2025",
-    to: "Present",
+    to: "03-21-2026",
     jobTitle: "CRM Engineer",
     description:
       "I lead front-end development efforts within the CRM domain while also driving the investigation and resolution of complex production issues affecting subscriber experience and system reliability. My work involves analyzing business and technical requirements, identifying root causes across the application flow, and delivering stable, maintainable solutions that improve performance, usability, and operational efficiency. I also contribute to system enhancements and new change requests in close collaboration with cross-functional teams.",
