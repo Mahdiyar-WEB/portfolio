@@ -1,14 +1,21 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { ReactNode, useEffect, useRef } from "react";
 
-const Modal = ({ title, body, isOpen, closeHandler }) => {
-  const modalRef = useRef(null);
+type Props = {
+  title?: string | undefined;
+  isOpen?: boolean | undefined;
+  closeHandler: () => void;
+  body?: ReactNode;
+};
 
-  const handleClickOutside = (event) => {
+const Modal = ({ title, body, isOpen, closeHandler }: Props) => {
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
     if (
       isOpen &&
       modalRef.current &&
-      !modalRef.current.contains(event.target)
+      !modalRef.current.contains(event.target as Node)
     ) {
       closeHandler();
     }
@@ -32,7 +39,7 @@ const Modal = ({ title, body, isOpen, closeHandler }) => {
       ></div>
       {/* modal */}
       <div
-       className={`fixed top-0 right-0 left-0 w-full h-[100dvh] grid place-items-center ${
+        className={`fixed top-0 right-0 left-0 w-full h-[100dvh] grid place-items-center ${
           isOpen ? "opacity-100 transition-opacity modal" : "opacity-0 -z-10 "
         }`}
       >

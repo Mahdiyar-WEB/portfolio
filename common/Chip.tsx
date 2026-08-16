@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Chip = ({ name, href }) => {
+const Chip = ({ name, href }: { name?: string | undefined; href: string }) => {
   return (
     <Link
       href={href}

@@ -3,6 +3,26 @@
 import Image from "next/image";
 import React from "react";
 
+
+
+type Props = {
+  title: string;
+  slug: string;
+  color: string;
+  category: string;
+  featured?: boolean;
+  summary: string;
+  accent: string;
+  lightTint: string;
+  darkTint: string;
+  lightBorder: string;
+  darkBorder: string;
+  iconOpacityLight: number;
+  iconOpacityDark: number;
+  iconInvertDark?: boolean;
+  iconSrc?: string;
+};
+
 const SkillCard = ({
   title,
   slug,
@@ -19,7 +39,7 @@ const SkillCard = ({
   iconOpacityLight = 0.24,
   iconOpacityDark = 0.13,
   iconInvertDark = false,
-}) => {
+}: Props) => {
   const iconUrl =
     iconSrc || (slug ? `https://cdn.simpleicons.org/${slug}/${color}` : "");
 
@@ -52,16 +72,18 @@ const SkillCard = ({
   return (
     <div
       className={cardClassName}
-      style={{
-        "--accent": accent,
-        "--accent-active": isDarkAccent ? "#e2e8f0" : accent,
-        "--light-tint": lightTint,
-        "--dark-tint": darkTint,
-        "--light-border": lightBorder,
-        "--dark-border": darkBorder,
-        "--icon-light": String(iconOpacityLight),
-        "--icon-dark": String(iconOpacityDark),
-      }}
+      style={
+        {
+          "--accent": accent,
+          "--accent-active": isDarkAccent ? "#e2e8f0" : accent,
+          "--light-tint": lightTint,
+          "--dark-tint": darkTint,
+          "--light-border": lightBorder,
+          "--dark-border": darkBorder,
+          "--icon-light": String(iconOpacityLight),
+          "--icon-dark": String(iconOpacityDark),
+        } as React.CSSProperties
+      }
     >
       <div aria-hidden="true" className="skill-bg-light absolute inset-0" />
       <div aria-hidden="true" className="skill-bg-dark absolute inset-0" />

@@ -3,7 +3,25 @@
 import React from "react";
 import SkillCard from "./Skill/SkillCard";
 
-const coreSkills = [
+type Props = {
+  title: string;
+  slug: string;
+  color: string;
+  category: string;
+  featured?: boolean;
+  summary: string;
+  accent: string;
+  lightTint: string;
+  darkTint: string;
+  lightBorder: string;
+  darkBorder: string;
+  iconOpacityLight: number;
+  iconOpacityDark: number;
+  iconInvertDark?: boolean;
+  iconSrc?: string;
+};
+
+const coreSkills: Props[] = [
   {
     title: "Next.js",
     slug: "nextdotjs",
@@ -456,7 +474,7 @@ const coreSkills = [
   },
 ];
 
-const aiSkills = [
+const aiSkills: Props[] = [
   {
     title: "ChatGPT",
     slug: "ai",
@@ -515,7 +533,7 @@ const Skills = () => {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-12 mb-20">
         {coreSkills.map((skill, index) => (
-          <SkillCard key={`${skill.title}-${index}`} {...skill} index={index} />
+          <SkillCard key={`${skill.title}-${index}`} {...skill} />
         ))}
       </div>
 
@@ -531,7 +549,7 @@ const Skills = () => {
             key={`${skill.title}-${index}`}
             className="w-full xl:w-[calc(30%-18px)]"
           >
-            <SkillCard {...skill} index={index} />
+            <SkillCard {...skill} />
           </div>
         ))}
       </div>
