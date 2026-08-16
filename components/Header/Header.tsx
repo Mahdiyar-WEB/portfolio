@@ -211,7 +211,7 @@ const Header = () => {
                     </Link>
 
                     {index + 1 !== links.length && (
-                      <hr className="h-px self-stretch opacity-20 bg-slate-900 dark:bg-gradient-to-tr dark:from-transparent dark:via-neutral-500 dark:to-transparent" />
+                      <hr className="border-0 h-px w-full bg-slate-300 dark:bg-neutral-500" />
                     )}
                   </li>
                 );
