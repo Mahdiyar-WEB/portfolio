@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Tooltip } from "react-tooltip";
@@ -9,9 +9,9 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import { toast } from "react-hot-toast";
 import Atropos from "atropos/react";
 import { BsThreeDots } from "react-icons/bs";
-import Modal from "@/common/Modal";
-import technologiesAndLibraries from "@/constants/technologies";
-import Chip from "@/common/Chip";
+import Modal from "../../common/Modal";
+import technologiesAndLibraries from "../../constants/technologies";
+import Chip from "../../common/Chip";
 
 const projects = [
   {
@@ -130,7 +130,11 @@ const projects = [
 
 const Projects = () => {
   const [toastCounts, setToastCounts] = useState(0);
-  const [modal, setModal] = useState({
+  const [modal, setModal] = useState<{
+    isOpen: boolean;
+    title: string;
+    body: ReactNode;
+  } | null>({
     isOpen: false,
     body: null,
     title: "",
@@ -144,9 +148,12 @@ const Projects = () => {
     });
   };
 
-  const displayTechnologiesHandler = (technologies) => {
-    const technologiesInformations = technologies.map((technology) =>
-      technologiesAndLibraries.find((item) => item.name === technology),
+  const displayTechnologiesHandler = (technologies: string[]) => {
+    const technologiesInformations: {
+      name: string;
+      href: string;
+    }[] = technologies.map((technology) =>
+      technologiesAndLibraries.find((item) => item.name === technology)!,
     );
     const modalBody = technologiesInformations.map((item, index) => (
       <Chip {...item} key={index} />
