@@ -35,7 +35,7 @@ const socials = [
   },
   {
     id: 5,
-    tooltipID: "github-tooltip",
+    tooltipID: "github-link-tooltip",
     tooltipContent: "Github",
     href: "https://github.com/Mahdiyar-WEB",
     element: <BsGithub size={20} />,
