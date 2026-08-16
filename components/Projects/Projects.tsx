@@ -152,8 +152,9 @@ const Projects = () => {
     const technologiesInformations: {
       name: string;
       href: string;
-    }[] = technologies.map((technology) =>
-      technologiesAndLibraries.find((item) => item.name === technology)!,
+    }[] = technologies.map(
+      (technology) =>
+        technologiesAndLibraries.find((item) => item.name === technology)!,
     );
     const modalBody = technologiesInformations.map((item, index) => (
       <Chip {...item} key={index} />
@@ -247,18 +248,6 @@ const Projects = () => {
                         <BsLink45Deg size={24} />
                       </button>
                     </CopyToClipboard>
-                    <Tooltip
-                      id="github-tooltip"
-                      place="bottom"
-                      variant="dark"
-                      className="text-xs font-semibold"
-                    />
-                    <Tooltip
-                      id="link-tooltip"
-                      place="bottom"
-                      variant="dark"
-                      className="text-xs font-semibold"
-                    />
                   </div>
                   <Link
                     target="_blank"
@@ -283,6 +272,18 @@ const Projects = () => {
           );
         },
       )}
+      <Tooltip
+        id="github-tooltip"
+        place="bottom"
+        variant="dark"
+        className="text-xs font-semibold"
+      />
+      <Tooltip
+        id="link-tooltip"
+        place="bottom"
+        variant="dark"
+        className="text-xs font-semibold"
+      />
     </section>
   );
 };
