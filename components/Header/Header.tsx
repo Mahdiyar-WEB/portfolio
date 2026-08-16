@@ -1,11 +1,16 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { BsSunFill, BsMoonFill } from "react-icons/bs";
 import { MdDesktopWindows } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import { Tooltip } from "react-tooltip";
+
+type Theme = {
+  title: "light" | "dark" | "system";
+  element: ReactNode;
+};
 
 const links = [
   { title: "projects", href: "#projects" },
@@ -14,7 +19,7 @@ const links = [
   { title: "contact", href: "#contact" },
 ];
 
-const themes = [
+const themes: Theme[] = [
   { title: "light", element: <BsSunFill size={18} /> },
   { title: "dark", element: <BsMoonFill size={16} /> },
   { title: "system", element: <MdDesktopWindows size={18} /> },
@@ -22,20 +27,22 @@ const themes = [
 
 const Header = () => {
   const [showItems, setShowItems] = useState(false);
-  const [activeTheme, setActiveTheme] = useState({ title: "", element: "" });
+  const [activeTheme, setActiveTheme] = useState<Theme | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-  const buttonRef = useRef(null);
-  const dropdownRef2 = useRef(null);
-  const buttonRef2 = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const dropdownRef2 = useRef<HTMLDivElement | null>(null);
+  const buttonRef2 = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     localStorage.getItem("theme")
-      ? handleChangeTheme(localStorage.getItem("theme"))
+      ? handleChangeTheme(
+          localStorage.getItem("theme") as "light" | "dark" | "system",
+        )
       : handleChangeTheme(themes[2].title);
   }, []);
 
-  const handleChangeTheme = (title) => {
+  const handleChangeTheme = (title: "light" | "dark" | "system") => {
     title === "system" &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
       ? document.documentElement.classList.add("dark")
@@ -44,7 +51,7 @@ const Header = () => {
         : document.documentElement.classList.remove("dark");
     localStorage.setItem("theme", title);
     setIsOpen(false);
-    setActiveTheme(themes.find((theme) => theme.title === title));
+    setActiveTheme(themes.find((theme) => theme.title === title)!);
   };
 
   const handleToggleShowItems = () => {
@@ -54,17 +61,17 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (
         isOpen &&
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target) &&
+        !dropdownRef.current.contains(event.target as Node) &&
         buttonRef.current &&
-        !buttonRef.current.contains(event.target) &&
+        !buttonRef.current.contains(event.target as Node) &&
         dropdownRef2.current &&
-        !dropdownRef2.current.contains(event.target) &&
+        !dropdownRef2.current.contains(event.target as Node) &&
         buttonRef2.current &&
-        !buttonRef2.current.contains(event.target)
+        !buttonRef2.current.contains(event.target as Node)
       ) {
         setIsOpen(false);
       }
